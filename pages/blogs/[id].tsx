@@ -1,15 +1,12 @@
 import Layout from '../../components/layout'
 import Head from 'next/head'
 import Date from '../../components/date'
+import { blogs } from "../../lib/blogs"
 import { GetStaticProps, GetStaticPaths } from 'next'
 import utilStyles from '../../styles/utils.module.css'
-import { blogs } from '../../lib/blogs'
-import cheerio from 'cheerio';
-import hljs from 'highlight.js'
-import 'highlight.js/styles/night-owl.css';
 
 export default function Post({
-  blog, highlightedBody
+  blog
 }: {
   blog: {
     id: string,
@@ -29,7 +26,6 @@ export default function Post({
   }
 }) {
   console.log(blog)
-  const UpperTitle = blog.id.charAt(0).toUpperCase() + blog.id.slice(1);
 
   return (
     <Layout>
@@ -37,12 +33,11 @@ export default function Post({
         <title>{blog.title}</title>
       </Head>
       <article>
-        <button onClick={() => getSortedPostsData()}></button>
         <h1 className={utilStyles.headingXl}>{blog.title}</h1>
         <div className={utilStyles.lightText}>
           {blog.createdAt}
         </div>
-        <div dangerouslySetInnerHTML={{ __html: highlightedBody }} />
+        <div dangerouslySetInnerHTML={{ __html: blog.content }} />
       </article>
     </Layout>
   )
@@ -67,19 +62,9 @@ export const getStaticProps: GetStaticProps = async ({ params }) => {
     contentId: id
   });
 
-  const $ = cheerio.load(data.content)
-
-  $('pre code').each((_, elm) => {
-    const result = hljs.highlightAuto($(elm).text())
-    $(elm).html(result.value)
-    $(elm).addClass('hljs')
-  })
-
-
   return {
     props: {
-      blog: data,
-      highlightedBody: $.html()
+      blog: data
     }
   }
 }
