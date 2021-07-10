@@ -1,52 +1,78 @@
-.heading2Xl {
-	font-size: 2.5rem;
-	line-height: 1.2;
-	font-weight: 800;
-	letter-spacing: -0.05rem;
-	margin: 1rem 0;
+.fontset-e-l {
+  font-family: inherit;
+  font-size: 80px;
+  font-weight: bold;
+  letter-spacing: .03em;
+  color: #1c1c1c;
 }
 
-.headingXl {
-	font-size: 2rem;
-	line-height: 1.3;
-	font-weight: 800;
-	letter-spacing: -0.05rem;
-	margin: 1rem 0;
+.fontset-e-m {
+  font-family: inherit;
+  font-size: 40px;
+  font-weight: 600;
+  letter-spacing: .03em;
+  line-height: 1;
+  color: #1c1c1c;
 }
 
-.headingLg {
-	font-size: 1.5rem;
-	line-height: 1.4;
-	margin: 1rem 0;
+.fontset-e-s {
+  font-family: inherit;
+  font-size: 17px;
+  font-weight: bold;
+  letter-spacing: .03em;
+  line-height: 1.647;
+  color: #1c1c1c;
 }
 
-.headingMd {
-	font-size: 1.2rem;
-	line-height: 1.5;
+.fontset-e-xs {
+  font-family: inherit;
+  font-size: 14px;
+  font-weight: bold;
+  letter-spacing: .02em;
+  color: #838383;
 }
 
-.borderCircle {
-	border-radius: 9999px;
+.fontset-j-l {
+  font-family: inherit;
+  font-size: 30px;
+  font-weight: bold;
+  letter-spacing: .02em;
+  color: #1c1c1c;
 }
 
-.colorInherit {
-	color: inherit;
+.fontset-j-m {
+  font-family: inherit;
+  font-size: 20px;
+  font-weight: bold;
+  letter-spacing: .02em;
+  line-height: 1.2;
+  color: #1c1c1c;
 }
 
-.padding1px {
-	padding-top: 1px;
+.fontset-j-s {
+  font-family: inherit;
+  font-size: 14px;
+  font-weight: 500;
+  letter-spacing: .02em;
+  line-height: 1.142;
+  color: #1c1c1c;
 }
 
-.list {
-	list-style: none;
-	padding: 0;
-	margin: 0;
+.fontset-j-xs {
+  font-family: inherit;
+  font-size: 13px;
+  font-weight: bold;
+  letter-spacing: .02em;
+  line-height: 1.153;
+  color: #838383;
 }
 
-.listItem {
-	margin: 0 0 1.25rem;
+.fontset-n-m {
+  font-family: inherit;
+  font-size: 12px;
+  font-weight: bold;
+  letter-spacing: .02em;
+  line-height: 1.166;
+  color: #838383;
 }
-
-.lightText {
-	color: #666;
-}
+/*# sourceMappingURL=utils.module.css.map */

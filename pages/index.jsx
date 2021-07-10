@@ -1,10 +1,10 @@
 import React,{ useState, useEffect, useMemo } from 'react'
 import Head from "next/head"
-import Layout, { siteTitle } from "../components/layout"
-import utilStyles from "../styles/utils.module.css"
+import Layout, { siteTitle } from "../templates/layout"
 import { blogs } from "../lib/blogs"
 import Link from "next/link"
-import Date from "../components/date"
+
+import { MainButton } from '../templates/organisms/molecules/atoms/MainButton'
 
 export default function Home({blog}) {
 	const searchCategory = (category) => {
@@ -40,7 +40,7 @@ export default function Home({blog}) {
 			<Head>
 				<title>{blog.title}</title>
 			</Head>
-			<section className={utilStyles.headingMd}>
+			<section>
 				<button onClick={() => searchCategory()}>全て</button>
 				<br />
 				<button onClick={() => searchCategory('xd')}>XDカテゴリーページ</button>
@@ -55,13 +55,16 @@ export default function Home({blog}) {
 					<a href='https://nextjs.org/learn'>our Next.js tutorial</a>.)
 				</p>
 			</section>
-			<section className={`${utilStyles.headingMd} ${utilStyles.padding1px}`}>
-				<h2 className={utilStyles.headingLg}>Blog</h2>
-				<ul className={utilStyles.list}>
+			<section>
+				<MainButton text="VIEW MORE"/>
+			</section>
+			<section>
+				<h2>Blog</h2>
+				<ul>
 					{blogs.map(
 						({ id, date, title, category, content, thumbnail, createdAt }) => (
-							<li className={utilStyles.listItem} key={id}>
-								<Link href={`/blogs/${id}`}>
+							<li key={id}>
+								<Link href={`/articles/${id}`}>
 									<a>{title}</a>
 								</Link>
 								<img
@@ -75,7 +78,7 @@ export default function Home({blog}) {
 								<br />
 								{category}
 								<br />
-								<small className={utilStyles.lightText}>
+								<small>
 									{blog.createdAt}
 									<p>{createdAt}</p>
 								</small>
@@ -89,7 +92,7 @@ export default function Home({blog}) {
 }
 
 export const getStaticProps = async () => {
-	const data = await blogs.get({ endpoint: "blog" });
+	const data = await blogs.get({ endpoint: "articles" });
 
   return {
     props: {

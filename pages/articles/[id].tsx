@@ -1,9 +1,10 @@
-import Layout from '../../components/layout'
+import Layout from '../../templates/layout'
 import Head from 'next/head'
-import Date from '../../components/date'
+import Date from '../../templates/date'
 import { blogs } from "../../lib/blogs"
 import { GetStaticProps, GetStaticPaths } from 'next'
-import utilStyles from '../../styles/utils.module.css'
+
+import { Archive } from '../../templates/archive'
 
 export default function Post({
   blog
@@ -27,26 +28,26 @@ export default function Post({
 }) {
 
   return (
-    <Layout>
+    <Archive>
       <Head>
         <title>{blog.title}</title>
       </Head>
       <article>
-        <h1 className={utilStyles.headingXl}>{blog.title}</h1>
-        <div className={utilStyles.lightText}>
+        <h1>{blog.title}</h1>
+        <div>
           {blog.createdAt}
         </div>
         <div dangerouslySetInnerHTML={{ __html: blog.content }} />
       </article>
-    </Layout>
+    </Archive>
   )
 }
 
 // 記事のパスを作成：[id]に代入される
 export const getStaticPaths: GetStaticPaths = async () => {
-  const data:any = await blogs.get({ endpoint: "blog" });
+  const data:any = await blogs.get({ endpoint: "articles" });
   console.log(data)
-  const paths = data.contents.map(content => `/blogs/${content.id}`)
+  const paths = data.contents.map(content => `/articles/${content.id}`)
   console.log(paths)
   return {
     paths,
@@ -62,7 +63,7 @@ export const getStaticProps: GetStaticProps = async ({ params }) => {
     endpoint: string,
     contentId: string
   } = await blogs.get({
-    endpoint: "blog",
+    endpoint: "articles",
     contentId: id
   });
 

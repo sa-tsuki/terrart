@@ -1,0 +1,36 @@
+
+// ブレークポイント宣言
+$breakpoints:(
+    'pc':'screen and (max-width: 1440px)', //仮
+    'tb':'screen and (max-width: 1080px)',　//仮
+    'sp': 'screen and (max-width: 725px)',
+    'xsp': 'screen and (max-width: 540px)',
+    'xxsp': 'screen and (max-width: 350px)',
+);
+
+@mixin mq($breakpoint: sp) {
+    @media #{map-get($breakpoints, $breakpoint)} {
+      @content;
+    }
+}
+
+// color
+$colorBase: #F2f2f2;
+$colorSub: #1c1c1c;
+$colorThin: #838383;
+$colorAccent: #36BCAC;
+
+// font-size English
+$fz_e_l: 80px;
+$fz_e_m: 40px;
+$fz_e_s: 17px;
+$fz_e_xs: 14px;
+
+// font-size Japanes
+$fz_j_l: 30px;
+$fz_j_m: 20px;
+$fz_j_s: 14px;
+$fz_j_xs: 13px;
+
+// font-size Number
+$fz_n_m: 12px;
