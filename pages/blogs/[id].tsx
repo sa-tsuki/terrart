@@ -25,7 +25,6 @@ export default function Post({
     content: string
   }
 }) {
-  console.log(blog)
 
   return (
     <Layout>
@@ -45,7 +44,8 @@ export default function Post({
 
 // 記事のパスを作成：[id]に代入される
 export const getStaticPaths: GetStaticPaths = async () => {
-  const data = await blogs.get({ endpoint: "blog" });
+  const data:any = await blogs.get({ endpoint: "blog" });
+  console.log(data)
   const paths = data.contents.map(content => `/blogs/${content.id}`)
   console.log(paths)
   return {
@@ -54,10 +54,14 @@ export const getStaticPaths: GetStaticPaths = async () => {
   }
 }
 
+
 // 
 export const getStaticProps: GetStaticProps = async ({ params }) => {
-  const id = params.id
-  const data = await blogs.get({
+  const id: any = params.id
+  const data:{
+    endpoint: string,
+    contentId: string
+  } = await blogs.get({
     endpoint: "blog",
     contentId: id
   });
