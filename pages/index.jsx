@@ -5,6 +5,7 @@ import { blogs } from "../lib/blogs"
 import Link from "next/link"
 
 import { MainButton } from '../templates/organisms/molecules/atoms/MainButton'
+import utilsStyles from '../styles/utils.module.css'
 
 export default function Home({blog}) {
 	const searchCategory = (category) => {
@@ -59,7 +60,7 @@ export default function Home({blog}) {
 				<MainButton text="VIEW MORE"/>
 			</section>
 			<section>
-				<h2>Blog</h2>
+				<h2 className={utilsStyles.fontset_e_l}>Blog</h2>
 				<ul>
 					{blogs.map(
 						({ id, date, title, category, content, thumbnail, createdAt }) => (

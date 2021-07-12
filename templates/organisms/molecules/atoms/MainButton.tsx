@@ -1,4 +1,5 @@
 import React from 'react'
+import utilsStyles from '../../../../styles/utils.module.css'
 import styled from 'styled-components'
 
 const Button = styled.button`
@@ -15,12 +16,11 @@ const Button = styled.button`
     min-width: 300px;
     max-height: 50px;
     padding: 15px 0;
-
 `
 
 export const MainButton = (props: {text: string}) => {
     const { text } = props
     return (
-        <Button>{text}</Button>
+        <button className={utilsStyles.main_button}>{text}</button>
     )
 }

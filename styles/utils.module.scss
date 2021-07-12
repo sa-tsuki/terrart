@@ -1,7 +1,7 @@
 @import '_base.scss';
 
 // text English
-.fontset-e-l {
+.fontset_e_l {
     font-family: inherit;
     font-size: $fz_e_l;
     font-weight: bold;
@@ -9,7 +9,7 @@
     // line-height: ;
     color: $colorSub
 }
-.fontset-e-m {
+.fontset_e_m {
     font-family: inherit;
     font-size: $fz_e_m;
     font-weight: 600;
@@ -17,7 +17,7 @@
     line-height: 1;
     color: $colorSub
 }
-.fontset-e-s {
+.fontset_e_s {
     font-family: inherit;
     font-size: $fz_e_s;
     font-weight: bold;
@@ -25,7 +25,7 @@
     line-height: 1.647;
     color: $colorSub
 }
-.fontset-e-xs {
+.fontset_e_xs {
     font-family: inherit;
     font-size: $fz_e_xs;
     font-weight: bold;
@@ -35,7 +35,7 @@
 }
 
 // text Japanese
-.fontset-j-l {
+.fontset_j_l {
     font-family: inherit;
     font-size: $fz_j_l;
     font-weight: bold;
@@ -43,7 +43,7 @@
     // line-height: ;
     color: $colorSub
 }
-.fontset-j-m {
+.fontset_j_m {
     font-family: inherit;
     font-size: $fz_j_m;
     font-weight: bold;
@@ -51,7 +51,7 @@
     line-height: 1.2;
     color: $colorSub
 }
-.fontset-j-s {
+.fontset_j_s {
     font-family: inherit;
     font-size: $fz_j_s;
     font-weight: 500;
@@ -59,7 +59,7 @@
     line-height: 1.142;
     color: $colorSub
 }
-.fontset-j-xs {
+.fontset_j_xs {
     font-family: inherit;
     font-size: $fz_j_xs;
     font-weight: bold;
@@ -69,11 +69,28 @@
 }
 
 // text Number
-.fontset-n-m {
+.fontset_n_m {
     font-family: inherit;
     font-size: $fz_n_m;
     font-weight: bold;
     letter-spacing: .02em;
     line-height: 1.166;
     color: $colorThin
+}
+
+.main_button {
+    font-family: inherit;
+    font-size: 17px;
+    font-weight: bold;
+    letter-spacing: .2em;
+    // line-height: ;
+    color: white;
+    text-align: center;
+    background: #36BCAC;
+    display: block;
+    border: 0;
+    border-radius: 9999px;
+    min-width: 300px;
+    max-height: 50px;
+    padding: 15px 0;
 }

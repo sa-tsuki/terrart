@@ -1,4 +1,4 @@
-.fontset-e-l {
+.fontset_e_l {
   font-family: inherit;
   font-size: 80px;
   font-weight: bold;
@@ -6,7 +6,7 @@
   color: #1c1c1c;
 }
 
-.fontset-e-m {
+.fontset_e_m {
   font-family: inherit;
   font-size: 40px;
   font-weight: 600;
@@ -15,7 +15,7 @@
   color: #1c1c1c;
 }
 
-.fontset-e-s {
+.fontset_e_s {
   font-family: inherit;
   font-size: 17px;
   font-weight: bold;
@@ -24,7 +24,7 @@
   color: #1c1c1c;
 }
 
-.fontset-e-xs {
+.fontset_e_xs {
   font-family: inherit;
   font-size: 14px;
   font-weight: bold;
@@ -32,7 +32,7 @@
   color: #838383;
 }
 
-.fontset-j-l {
+.fontset_j_l {
   font-family: inherit;
   font-size: 30px;
   font-weight: bold;
@@ -40,7 +40,7 @@
   color: #1c1c1c;
 }
 
-.fontset-j-m {
+.fontset_j_m {
   font-family: inherit;
   font-size: 20px;
   font-weight: bold;
@@ -49,7 +49,7 @@
   color: #1c1c1c;
 }
 
-.fontset-j-s {
+.fontset_j_s {
   font-family: inherit;
   font-size: 14px;
   font-weight: 500;
@@ -58,7 +58,7 @@
   color: #1c1c1c;
 }
 
-.fontset-j-xs {
+.fontset_j_xs {
   font-family: inherit;
   font-size: 13px;
   font-weight: bold;
@@ -67,12 +67,28 @@
   color: #838383;
 }
 
-.fontset-n-m {
+.fontset_n_m {
   font-family: inherit;
   font-size: 12px;
   font-weight: bold;
   letter-spacing: .02em;
   line-height: 1.166;
   color: #838383;
+}
+
+.main_button {
+  font-family: inherit;
+  font-size: 17px;
+  font-weight: bold;
+  letter-spacing: .2em;
+  color: white;
+  text-align: center;
+  background: #36BCAC;
+  display: block;
+  border: 0;
+  border-radius: 9999px;
+  min-width: 300px;
+  max-height: 50px;
+  padding: 15px 0;
 }
 /*# sourceMappingURL=utils.module.css.map */
