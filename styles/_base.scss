@@ -1,24 +1,24 @@
-
 // ブレークポイント宣言
-$breakpoints:(
-    'pc':'screen and (max-width: 1440px)', //仮
-    'tb':'screen and (max-width: 1080px)',　//仮
-    'sp': 'screen and (max-width: 725px)',
-    'xsp': 'screen and (max-width: 540px)',
-    'xxsp': 'screen and (max-width: 350px)',
+$breakpoints: (
+  'pc': 'screen and (max-width: 1440px)',
+  //仮
+  'tb': 'screen and (max-width: 1080px)',
+  　//仮 'sp': 'screen and (max-width: 725px)',
+  'xsp': 'screen and (max-width: 540px)',
+  'xxsp': 'screen and (max-width: 350px)',
 );
 
 @mixin mq($breakpoint: sp) {
-    @media #{map-get($breakpoints, $breakpoint)} {
-      @content;
-    }
+  @media #{map-get($breakpoints, $breakpoint)} {
+    @content;
+  }
 }
 
 // color
-$colorBase: #F2f2f2;
+$colorBase: #f2f2f2;
 $colorSub: #1c1c1c;
 $colorThin: #838383;
-$colorAccent: #36BCAC;
+$colorAccent: #36bcac;
 
 // font-size English
 $fz_e_l: 80px;

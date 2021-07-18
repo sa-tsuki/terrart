@@ -2,95 +2,95 @@
 
 // text English
 .fontset_e_l {
-    font-family: inherit;
-    font-size: $fz_e_l;
-    font-weight: bold;
-    letter-spacing: .03em;
-    // line-height: ;
-    color: $colorSub
+  font-family: inherit;
+  font-size: $fz_e_l;
+  font-weight: bold;
+  letter-spacing: 0.03em;
+  // line-height: ;
+  color: $colorSub;
 }
 .fontset_e_m {
-    font-family: inherit;
-    font-size: $fz_e_m;
-    font-weight: 600;
-    letter-spacing: .03em;
-    line-height: 1;
-    color: $colorSub
+  font-family: inherit;
+  font-size: $fz_e_m;
+  font-weight: 600;
+  letter-spacing: 0.03em;
+  line-height: 1;
+  color: $colorSub;
 }
 .fontset_e_s {
-    font-family: inherit;
-    font-size: $fz_e_s;
-    font-weight: bold;
-    letter-spacing: .03em;
-    line-height: 1.647;
-    color: $colorSub
+  font-family: inherit;
+  font-size: $fz_e_s;
+  font-weight: bold;
+  letter-spacing: 0.03em;
+  line-height: 1.647;
+  color: $colorSub;
 }
 .fontset_e_xs {
-    font-family: inherit;
-    font-size: $fz_e_xs;
-    font-weight: bold;
-    letter-spacing: .02em;
-    // line-height: 1;
-    color: $colorThin
+  font-family: inherit;
+  font-size: $fz_e_xs;
+  font-weight: bold;
+  letter-spacing: 0.02em;
+  // line-height: 1;
+  color: $colorThin;
 }
 
 // text Japanese
 .fontset_j_l {
-    font-family: inherit;
-    font-size: $fz_j_l;
-    font-weight: bold;
-    letter-spacing: .02em;
-    // line-height: ;
-    color: $colorSub
+  font-family: inherit;
+  font-size: $fz_j_l;
+  font-weight: bold;
+  letter-spacing: 0.02em;
+  // line-height: ;
+  color: $colorSub;
 }
 .fontset_j_m {
-    font-family: inherit;
-    font-size: $fz_j_m;
-    font-weight: bold;
-    letter-spacing: .02em;
-    line-height: 1.2;
-    color: $colorSub
+  font-family: inherit;
+  font-size: $fz_j_m;
+  font-weight: bold;
+  letter-spacing: 0.02em;
+  line-height: 1.2;
+  color: $colorSub;
 }
 .fontset_j_s {
-    font-family: inherit;
-    font-size: $fz_j_s;
-    font-weight: 500;
-    letter-spacing: .02em;
-    line-height: 1.142;
-    color: $colorSub
+  font-family: inherit;
+  font-size: $fz_j_s;
+  font-weight: 500;
+  letter-spacing: 0.02em;
+  line-height: 1.142;
+  color: $colorSub;
 }
 .fontset_j_xs {
-    font-family: inherit;
-    font-size: $fz_j_xs;
-    font-weight: bold;
-    letter-spacing: .02em;
-    line-height: 1.153;
-    color: $colorThin
+  font-family: inherit;
+  font-size: $fz_j_xs;
+  font-weight: bold;
+  letter-spacing: 0.02em;
+  line-height: 1.153;
+  color: $colorThin;
 }
 
 // text Number
 .fontset_n_m {
-    font-family: inherit;
-    font-size: $fz_n_m;
-    font-weight: bold;
-    letter-spacing: .02em;
-    line-height: 1.166;
-    color: $colorThin
+  font-family: inherit;
+  font-size: $fz_n_m;
+  font-weight: bold;
+  letter-spacing: 0.02em;
+  line-height: 1.166;
+  color: $colorThin;
 }
 
 .main_button {
-    font-family: inherit;
-    font-size: 17px;
-    font-weight: bold;
-    letter-spacing: .2em;
-    // line-height: ;
-    color: white;
-    text-align: center;
-    background: #36BCAC;
-    display: block;
-    border: 0;
-    border-radius: 9999px;
-    min-width: 300px;
-    max-height: 50px;
-    padding: 15px 0;
+  font-family: inherit;
+  font-size: 17px;
+  font-weight: bold;
+  letter-spacing: 0.2em;
+  // line-height: ;
+  color: white;
+  text-align: center;
+  background: #36bcac;
+  display: block;
+  border: 0;
+  border-radius: 9999px;
+  min-width: 300px;
+  max-height: 50px;
+  padding: 15px 0;
 }

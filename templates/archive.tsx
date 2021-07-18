@@ -5,11 +5,7 @@ import styles from './layout.module.css'
 const name = 'Satsuki'
 export const siteTitle = 'Next.js Sample Website'
 
-export const Archive = ({
-  children,
-}: {
-  children: React.ReactNode
-}) => {
+export const Archive = ({ children }: { children: React.ReactNode }) => {
   return (
     <div className={styles.container}>
       <Head>
@@ -21,7 +17,7 @@ export const Archive = ({
         <meta
           property="og:image"
           content={`https://og-image.vercel.app/${encodeURI(
-            siteTitle
+            siteTitle,
           )}.png?theme=light&md=0&fontSize=75px&images=https%3A%2F%2Fassets.zeit.co%2Fimage%2Fupload%2Ffront%2Fassets%2Fdesign%2Fnextjs-black-logo.svg`}
         />
         <meta name="og:title" content={siteTitle} />
@@ -31,11 +27,12 @@ export const Archive = ({
       <h1>記事詳細ページだけに追加したい</h1>
       <main>{children}</main>
       <div className={styles.backToHome}>
-          <Link href="/">
-            <a>← Back to home</a>
-          </Link>
-        </div>
+        <Link href="/">
+          <a>← Back to home</a>
+        </Link>
+      </div>
     </div>
-)}
+  )
+}
 
 export default Archive

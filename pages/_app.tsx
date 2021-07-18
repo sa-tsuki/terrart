@@ -4,9 +4,9 @@ import '../styles/app.css'
 function App({ Component, pageProps }: AppProps) {
   return (
     <>
-  <div>これ全ページに反映？</div>
-  <Component {...pageProps} />
-  </>
+      <div>これ全ページに反映？</div>
+      <Component {...pageProps} />
+    </>
   )
 }
 
