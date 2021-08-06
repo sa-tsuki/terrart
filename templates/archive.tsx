@@ -1,13 +1,12 @@
 import Head from 'next/head'
 import Link from 'next/link'
-import styles from './layout.module.css'
 
 const name = 'Satsuki'
 export const siteTitle = 'Next.js Sample Website'
 
 export const Archive = ({ children }: { children: React.ReactNode }) => {
   return (
-    <div className={styles.container}>
+    <div>
       <Head>
         <link rel="icon" href="/favicon.ico" />
         <meta
@@ -26,7 +25,7 @@ export const Archive = ({ children }: { children: React.ReactNode }) => {
       </Head>
       <h1>記事詳細ページだけに追加したい</h1>
       <main>{children}</main>
-      <div className={styles.backToHome}>
+      <div>
         <Link href="/">
           <a>← Back to home</a>
         </Link>

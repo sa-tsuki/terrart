@@ -1,0 +1,33 @@
+.section {
+  max-width: 1112px;
+  margin: 0 auto;
+}
+
+.section .h2 {
+  margin-bottom: 10px;
+}
+
+.section .buttons_box {
+  margin-bottom: 20px;
+}
+
+.section .buttons_box button.fontset_e_s {
+  font-family: inherit;
+  font-size: 17px;
+  font-weight: bold;
+  letter-spacing: 0.03em;
+  line-height: 1.647;
+  color: #838383;
+  border: none;
+  background: inherit;
+  margin-right: 20px;
+}
+
+.section .buttons_box button.fontset_e_s:hover {
+  color: #1c1c1c;
+}
+
+.section .buttons_box button.active {
+  color: #1d1d1d;
+}
+/*# sourceMappingURL=top.module.css.map */

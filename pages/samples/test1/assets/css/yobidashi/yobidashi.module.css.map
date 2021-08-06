@@ -1,6 +1,6 @@
 {
     "version": 3,
-    "mappings": "AAAA,AAAA,KAAK,CAAC;EACF,KAAK,EAAC,GAAG;EACT,SAAS,EAAE,IAAI;CAClB",
+    "mappings": "AAAA,AAAA,KAAK,CAAC;EACJ,KAAK,EAAE,GAAG;EACV,SAAS,EAAE,IAAI;CAChB",
     "sources": [
         "yobidashi.module.scss"
     ],

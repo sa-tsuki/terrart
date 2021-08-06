@@ -1,11 +1,15 @@
 import { AppProps } from 'next/app'
+// import 'sanitize.css'
+import 'destyle.css'
 import '../styles/app.css'
+import { Header, Footer } from '../templates/organisms/molecules'
 
 function App({ Component, pageProps }: AppProps) {
   return (
     <>
-      <div>これ全ページに反映？</div>
+      <Header />
       <Component {...pageProps} />
+      <Footer />
     </>
   )
 }

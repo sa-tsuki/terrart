@@ -6,7 +6,7 @@
   font-size: $fz_e_l;
   font-weight: bold;
   letter-spacing: 0.03em;
-  // line-height: ;
+  line-height: 1;
   color: $colorSub;
 }
 .fontset_e_m {
@@ -30,7 +30,7 @@
   font-size: $fz_e_xs;
   font-weight: bold;
   letter-spacing: 0.02em;
-  // line-height: 1;
+  line-height: 1;
   color: $colorThin;
 }
 
@@ -40,7 +40,7 @@
   font-size: $fz_j_l;
   font-weight: bold;
   letter-spacing: 0.02em;
-  // line-height: ;
+  line-height: 1;
   color: $colorSub;
 }
 .fontset_j_m {
@@ -54,7 +54,7 @@
 .fontset_j_s {
   font-family: inherit;
   font-size: $fz_j_s;
-  font-weight: 500;
+  font-weight: 600;
   letter-spacing: 0.02em;
   line-height: 1.142;
   color: $colorSub;
@@ -83,7 +83,7 @@
   font-size: 17px;
   font-weight: bold;
   letter-spacing: 0.2em;
-  // line-height: ;
+  line-height: 1;
   color: white;
   text-align: center;
   background: #36bcac;
@@ -93,4 +93,5 @@
   min-width: 300px;
   max-height: 50px;
   padding: 15px 0;
+  margin: 0 auto;
 }

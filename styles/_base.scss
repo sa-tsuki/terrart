@@ -1,9 +1,8 @@
 // ブレークポイント宣言
 $breakpoints: (
   'pc': 'screen and (max-width: 1440px)',
-  //仮
   'tb': 'screen and (max-width: 1080px)',
-  　//仮 'sp': 'screen and (max-width: 725px)',
+  'sp': 'screen and (max-width: 725px)',
   'xsp': 'screen and (max-width: 540px)',
   'xxsp': 'screen and (max-width: 350px)',
 );
@@ -27,7 +26,7 @@ $fz_e_s: 17px;
 $fz_e_xs: 14px;
 
 // font-size Japanes
-$fz_j_l: 30px;
+$fz_j_l: 36px;
 $fz_j_m: 20px;
 $fz_j_s: 14px;
 $fz_j_xs: 13px;

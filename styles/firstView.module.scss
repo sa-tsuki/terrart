@@ -1,0 +1,8 @@
+@import '_base.scss';
+.section{
+    height: 70vh;
+    background: $colorAccent;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}

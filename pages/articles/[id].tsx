@@ -1,7 +1,5 @@
-import Layout from '../../templates/layout'
 import Head from 'next/head'
-import Date from '../../templates/date'
-import { blogs } from '../../lib/blogs'
+import { client } from '../../lib/client'
 import { GetStaticProps, GetStaticPaths } from 'next'
 
 import { Archive } from '../../templates/archive'
@@ -42,7 +40,7 @@ export default function Post({
 
 // 記事のパスを作成：[id]に代入される
 export const getStaticPaths: GetStaticPaths = async () => {
-  const data: any = await blogs.get({ endpoint: 'articles' })
+  const data: any = await client.get({ endpoint: 'articles' })
   console.log(data)
   const paths = data.contents.map((content) => `/articles/${content.id}`)
   console.log(paths)
@@ -58,7 +56,7 @@ export const getStaticProps: GetStaticProps = async ({ params }) => {
   const data: {
     endpoint: string
     contentId: string
-  } = await blogs.get({
+  } = await client.get({
     endpoint: 'articles',
     contentId: id,
   })

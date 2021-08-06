@@ -3,8 +3,8 @@
   font-size: 80px;
   font-weight: bold;
   letter-spacing: 0.03em;
+  line-height: 1;
   color: #1c1c1c;
-  line-height: 1em;
 }
 
 .fontset_e_m {
@@ -14,7 +14,6 @@
   letter-spacing: 0.03em;
   line-height: 1;
   color: #1c1c1c;
-  line-height: 1em;
 }
 
 .fontset_e_s {
@@ -24,7 +23,6 @@
   letter-spacing: 0.03em;
   line-height: 1.647;
   color: #1c1c1c;
-  line-height: 1em;
 }
 
 .fontset_e_xs {
@@ -32,17 +30,17 @@
   font-size: 14px;
   font-weight: bold;
   letter-spacing: 0.02em;
+  line-height: 1;
   color: #838383;
-  line-height: 1em;
 }
 
 .fontset_j_l {
   font-family: inherit;
-  font-size: 30px;
+  font-size: 36px;
   font-weight: bold;
   letter-spacing: 0.02em;
+  line-height: 1;
   color: #1c1c1c;
-  line-height: 1em;
 }
 
 .fontset_j_m {
@@ -52,13 +50,12 @@
   letter-spacing: 0.02em;
   line-height: 1.2;
   color: #1c1c1c;
-  line-height: 1em;
 }
 
 .fontset_j_s {
   font-family: inherit;
   font-size: 14px;
-  font-weight: 500;
+  font-weight: 600;
   letter-spacing: 0.02em;
   line-height: 1.142;
   color: #1c1c1c;
@@ -87,6 +84,7 @@
   font-size: 17px;
   font-weight: bold;
   letter-spacing: 0.2em;
+  line-height: 1;
   color: white;
   text-align: center;
   background: #36bcac;
@@ -96,5 +94,6 @@
   min-width: 300px;
   max-height: 50px;
   padding: 15px 0;
+  margin: 0 auto;
 }
 /*# sourceMappingURL=utils.module.css.map */
