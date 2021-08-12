@@ -42,9 +42,9 @@ const Top = (props) => {
     const test = document.querySelectorAll('.category')
     const target = e.target
     for (let i = 0; i < test.length; i++) {
-      test[i].classList.remove('articles_active__1aq0b')
+      test[i].classList.remove('top_active__Sf587')
     }
-    target.classList.add('articles_active__1aq0b')
+    target.classList.add('top_active__Sf587')
   }
 
   const categories = [

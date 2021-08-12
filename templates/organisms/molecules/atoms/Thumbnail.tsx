@@ -1,6 +1,6 @@
 import React from 'react'
 
-const ThumbnailForTop = (props) => {
+const Thumbnail = (props) => {
     const {src, alt, width, height } = props
     return (
         <div>
@@ -9,4 +9,4 @@ const ThumbnailForTop = (props) => {
     )
 }
 
-export default ThumbnailForTop
+export default Thumbnail

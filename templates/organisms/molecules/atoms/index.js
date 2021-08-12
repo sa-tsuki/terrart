@@ -14,4 +14,4 @@ export { default as Fontset_j_xs } from './Fontset_j_xs'
 export { default as MainButton } from './MainButton'
 
 // TopImage
-export { default as ThumbnailForTop } from './ThumbnailForTop'
+export { default as Thumbnail } from './Thumbnail'

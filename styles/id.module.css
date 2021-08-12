@@ -1,0 +1,27 @@
+.article {
+  width: 1112px;
+  margin: 0 auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.article img, .article iframe {
+  margin: 0 auto;
+}
+
+.article iframe {
+  width: 100%;
+}
+
+.article .content {
+  max-width: 720px;
+}
+/*# sourceMappingURL=id.module.css.map */

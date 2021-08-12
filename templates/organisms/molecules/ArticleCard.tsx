@@ -1,6 +1,6 @@
 import Link from 'next/link'
 import React from 'react'
-import { ThumbnailForTop } from './atoms'
+import { Thumbnail } from './atoms'
 import utilsStyles from '../../../styles/utils.module.css'
 import articleCardStyles from '../../../styles/articleCard.module.css'
 
@@ -10,7 +10,7 @@ const ArticleCard = (props) => {
         <li className={`${articleCardStyles.li}`}>
             <Link href={href}>
                 <a>
-                    <ThumbnailForTop
+                    <Thumbnail
                     src={src}
                     alt={alt}
                     width={width}
