@@ -1,8 +1,9 @@
+@charset "UTF-8";
 html,
 body {
   padding: 0;
   margin: 0;
-  font-family: 'SF Pro', -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+  font-family: -apple-system, system-ui, "Helvetica Neue", "Segoe UI", "Hiragino Kaku Gothic ProN", "Hiragino Sans", "ヒラギノ角ゴ ProN W3", Arial, メイリオ, Meiryo, sans-serif;
   /* line-height: ; */
   font-size: 18px;
   background: #f2f2f2;
@@ -61,6 +62,17 @@ li {
   width: 100%;
 }
 
+.id_article .time {
+  font-family: inherit;
+  font-size: 12px;
+  font-weight: bold;
+  letter-spacing: 0.02em;
+  line-height: 1;
+  color: #838383;
+  margin-left: 5px;
+  padding-bottom: 40px;
+}
+
 .id_article h1 {
   padding-bottom: 10px;
 }
@@ -71,9 +83,9 @@ li {
   font-weight: bold;
   letter-spacing: 0.02em;
   line-height: 1.2;
-  color: #1c1c1c;
+  color: #404040;
   padding-left: 17px;
-  margin-bottom: 74px;
+  margin-bottom: 44px;
   position: relative;
 }
 
@@ -82,6 +94,31 @@ li {
   content: '';
   width: 6px;
   height: calc(100% + 22px);
+  border-radius: 50px;
+  background: #36bcac;
+  top: 50%;
+  left: 0;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+}
+
+.id_article h3 {
+  font-family: inherit;
+  font-size: 20px;
+  font-weight: bold;
+  letter-spacing: 0.02em;
+  line-height: 1.2;
+  color: #404040;
+  padding-left: 17px;
+  margin-bottom: 74px;
+  position: relative;
+}
+
+.id_article h3:before {
+  position: absolute;
+  content: '';
+  width: 6px;
+  height: 6px;
   border-radius: 50px;
   background: #36bcac;
   top: 50%;
@@ -102,6 +139,7 @@ li {
 
 .id_article .content {
   max-width: 720px;
+  width: 100%;
   margin: 0 auto;
 }
 
@@ -112,6 +150,28 @@ li {
 }
 
 .id_article .content p {
+  font-family: inherit;
+  font-size: 16px;
+  font-weight: 400;
+  letter-spacing: .1em;
+  line-height: 1.514;
+  color: #404040;
   margin-bottom: 74px;
+}
+
+.id_article .content p strong {
+  font-weight: 600;
+}
+
+.id_article .content p a {
+  color: #36bcac;
+}
+
+.id_article .content blockquote {
+  color: #404040;
+  font-size: 16px;
+  padding: 16px 32px;
+  background: #fff;
+  border-radius: 9px;
 }
 /*# sourceMappingURL=app.css.map */

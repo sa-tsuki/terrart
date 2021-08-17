@@ -1,5 +1,4 @@
 import Head from 'next/head'
-import styled from 'styled-components'
 import { client } from '../../lib/client'
 import { GetStaticProps, GetStaticPaths } from 'next'
 
