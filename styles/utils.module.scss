@@ -5,9 +5,9 @@
   font-family: inherit;
   font-size: $fz_e_l;
   font-weight: bold;
-  letter-spacing: 0.03em;
+  letter-spacing: -0.01em;
   line-height: 1;
-  color: $colorSub;
+  color: $colorText;
 }
 .fontset_e_m {
   font-family: inherit;
@@ -15,7 +15,7 @@
   font-weight: 600;
   letter-spacing: 0.03em;
   line-height: 1;
-  color: $colorSub;
+  color: $colorText;
 }
 .fontset_e_s {
   font-family: inherit;
@@ -23,7 +23,7 @@
   font-weight: bold;
   letter-spacing: 0.03em;
   line-height: 1.647;
-  color: $colorSub;
+  color: $colorText;
 }
 .fontset_e_xs {
   font-family: inherit;
@@ -41,7 +41,7 @@
   font-weight: bold;
   letter-spacing: 0.02em;
   line-height: 1;
-  color: $colorSub;
+  color: $colorText;
 }
 .fontset_j_m {
   font-family: inherit;
@@ -49,7 +49,7 @@
   font-weight: bold;
   letter-spacing: 0.02em;
   line-height: 1.2;
-  color: $colorSub;
+  color: $colorText;
 }
 .fontset_j_s {
   font-family: inherit;
@@ -57,7 +57,7 @@
   font-weight: 600;
   letter-spacing: 0.02em;
   line-height: 1.142;
-  color: $colorSub;
+  color: $colorText;
 }
 .fontset_j_xs {
   font-family: inherit;
@@ -80,13 +80,13 @@
 
 .main_button {
   font-family: inherit;
-  font-size: 17px;
+  font-size: 12px;
   font-weight: bold;
-  letter-spacing: 0.2em;
+  letter-spacing: 0.1em;
   line-height: 1;
-  color: white;
+  color: $colorText;
   text-align: center;
-  background: #36bcac;
+  background: $colorBase;
   display: block;
   border: 0;
   border-radius: 9999px;
@@ -94,4 +94,20 @@
   max-height: 50px;
   padding: 15px 0;
   margin: 0 auto;
+  transition: .3s;
+  &:hover{
+    color: $colorAccent;
+    transition: .3s;
+  }
+}
+
+.main_shadow{
+  box-shadow: 4px 4px 10px #00000021, -4px -4px 5px #ffffff, inset 0 0 30px #00000003;
+}
+
+.accent_shadow{
+  box-shadow: 4px 4px 10px #00000021, -4px -4px 5px #ffffff, inset 0 0 30px #00000003;
+  &:hover{
+    box-shadow: 4px 4px 5px #36bcac59, -4px -4px 5px #ffffff, inset 0 0 30px #00000003;
+  }
 }

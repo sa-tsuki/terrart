@@ -5,10 +5,10 @@ html,
 body {
   padding: 0;
   margin: 0;
-  font-family: -apple-system, system-ui, "Helvetica Neue", "Segoe UI", "Hiragino Kaku Gothic ProN", "Hiragino Sans", "ヒラギノ角ゴ ProN W3", Arial, メイリオ, Meiryo, sans-serif;;
+  font-family: "SF Pro JP","SF Pro Display","SF Pro Icons","Hiragino Kaku Gothic Pro","ヒラギノ角ゴ Pro W3","メイリオ","Meiryo","ＭＳ Ｐゴシック","Helvetica Neue","Helvetica","Arial",sans-serif;
   /* line-height: ; */
   font-size: 18px;
-  background: #f2f2f2;
+  background: $colorBase;
 }
 * {
   box-sizing: border-box;
@@ -33,19 +33,28 @@ img {
 li {
   list-style: none;
 }
+#stoker{
+  position: fixed;
+  top: 0;
+  left: 0;
+  will-change: transform;
+}
 // articleページCSS
 .id_article{
   width: 1112px;
   margin: 0 auto;
+  padding-top: 230px;
   display: flex;
   justify-content: center;
   flex-direction: column;
-  img,iframe{
+  img{
       margin: 0 auto;
-      margin-bottom: $mb;
+      margin-bottom: 40px;
   }
   iframe{
-      width: 100%;
+    width: calc(100% + 230px);
+    transform: translateX(-115px);
+    margin: 40px 0;
   }
   .time{
     font-family: inherit;
@@ -67,8 +76,8 @@ li {
     letter-spacing: 0.02em;
     line-height: 1.2;
     color: $colorText;
-    padding-left: 17px;
-    margin-bottom: 44px;
+    padding-left: 25px;
+    margin: 84px 0 40px;
     position: relative;
     &:before{
       position: absolute;
@@ -90,7 +99,7 @@ li {
     line-height: 1.2;
     color: $colorText;
     padding-left: 17px;
-    margin-bottom: $mb;
+    margin: 40px 0;
     position: relative;
     &:before{
       position: absolute;
@@ -124,10 +133,10 @@ li {
         font-family: inherit;
         font-size: 16px;
         font-weight: 400;
-        letter-spacing: .1em;
+        letter-spacing: .08em;
         line-height: 1.514;
         color: $colorText;
-        margin-bottom: $mb;
+        // margin-bottom: $mb;
         strong{
           font-weight: 600;
         }
@@ -138,9 +147,18 @@ li {
       blockquote {
         color: $colorText;
         font-size: 16px;
+        letter-spacing: .08em;
+        line-height: 1.514;
         padding: 16px 32px;
         background: #fff;
         border-radius: 9px;
-    }
+        margin: 20px 0;
+
+        // box-shadow: 4px 4px 10px #00000021, -4px -4px 5px #ffffff, inset 0 0 30px #00000003
+      }
+      pre{
+        margin: 20px 0;
+        border-radius: 9px;
+      }
   }
 }

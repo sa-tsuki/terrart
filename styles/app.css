@@ -3,10 +3,10 @@ html,
 body {
   padding: 0;
   margin: 0;
-  font-family: -apple-system, system-ui, "Helvetica Neue", "Segoe UI", "Hiragino Kaku Gothic ProN", "Hiragino Sans", "ヒラギノ角ゴ ProN W3", Arial, メイリオ, Meiryo, sans-serif;
+  font-family: "SF Pro JP","SF Pro Display","SF Pro Icons","Hiragino Kaku Gothic Pro","ヒラギノ角ゴ Pro W3","メイリオ","Meiryo","ＭＳ Ｐゴシック","Helvetica Neue","Helvetica","Arial",sans-serif;
   /* line-height: ; */
   font-size: 18px;
-  background: #f2f2f2;
+  background: #f4f4f4;
 }
 
 * {
@@ -38,9 +38,17 @@ li {
   list-style: none;
 }
 
+#stoker {
+  position: fixed;
+  top: 0;
+  left: 0;
+  will-change: transform;
+}
+
 .id_article {
   width: 1112px;
   margin: 0 auto;
+  padding-top: 230px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -53,13 +61,16 @@ li {
           flex-direction: column;
 }
 
-.id_article img, .id_article iframe {
+.id_article img {
   margin: 0 auto;
-  margin-bottom: 74px;
+  margin-bottom: 40px;
 }
 
 .id_article iframe {
-  width: 100%;
+  width: calc(100% + 230px);
+  -webkit-transform: translateX(-115px);
+          transform: translateX(-115px);
+  margin: 40px 0;
 }
 
 .id_article .time {
@@ -83,9 +94,9 @@ li {
   font-weight: bold;
   letter-spacing: 0.02em;
   line-height: 1.2;
-  color: #404040;
-  padding-left: 17px;
-  margin-bottom: 44px;
+  color: #383838;
+  padding-left: 25px;
+  margin: 84px 0 40px;
   position: relative;
 }
 
@@ -108,9 +119,9 @@ li {
   font-weight: bold;
   letter-spacing: 0.02em;
   line-height: 1.2;
-  color: #404040;
+  color: #383838;
   padding-left: 17px;
-  margin-bottom: 74px;
+  margin: 40px 0;
   position: relative;
 }
 
@@ -153,10 +164,9 @@ li {
   font-family: inherit;
   font-size: 16px;
   font-weight: 400;
-  letter-spacing: .1em;
+  letter-spacing: .08em;
   line-height: 1.514;
-  color: #404040;
-  margin-bottom: 74px;
+  color: #383838;
 }
 
 .id_article .content p strong {
@@ -168,10 +178,18 @@ li {
 }
 
 .id_article .content blockquote {
-  color: #404040;
+  color: #383838;
   font-size: 16px;
+  letter-spacing: .08em;
+  line-height: 1.514;
   padding: 16px 32px;
   background: #fff;
+  border-radius: 9px;
+  margin: 20px 0;
+}
+
+.id_article .content pre {
+  margin: 20px 0;
   border-radius: 9px;
 }
 /*# sourceMappingURL=app.css.map */

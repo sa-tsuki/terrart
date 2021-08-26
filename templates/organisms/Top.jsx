@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react'
 import utilsStyles from '../../styles/utils.module.css'
 import topStyles from '../../styles/top.module.css'
 import { ArticleCards, FirstView } from './molecules'
-import { MainButton } from './molecules/atoms'
+import { FunctionButton } from './molecules/atoms'
 
 const Top = (props) => {
   const { blog } = props
@@ -92,7 +92,7 @@ const Top = (props) => {
           })}
         </div>
         <ArticleCards blog={blogs} />
-        <MainButton text={'VIEW MORE'} />
+        <FunctionButton text={'VIEW MORE'} />
       </section>
     </>
   )

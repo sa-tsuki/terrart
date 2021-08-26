@@ -5,6 +5,7 @@ import '../styles/app.css'
 import { Header, Footer } from '../templates/organisms/molecules'
 
 function App({ Component, pageProps }: AppProps) {
+
   return (
     <>
       <Header />

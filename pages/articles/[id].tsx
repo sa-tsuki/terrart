@@ -1,4 +1,7 @@
 import Head from 'next/head'
+import cheerio from 'cheerio';
+import hljs from 'highlight.js'
+import 'highlight.js/styles/nord.css';
 import { client } from '../../lib/client'
 import { GetStaticProps, GetStaticPaths } from 'next'
 
@@ -7,10 +10,10 @@ import { GetStaticProps, GetStaticPaths } from 'next'
 import '../../styles/id.module.css'
 import utilsStyles from '../../styles/utils.module.css'
 import Date from '../../templates/date'
-import { Thumbnail } from '../../templates/organisms/molecules/atoms'
+import { LinkButton, Thumbnail } from '../../templates/organisms/molecules/atoms'
 
 export default function Post({
-  blog,
+  blog
 }: {
   blog: {
     id: string
@@ -27,9 +30,16 @@ export default function Post({
     }
     category?: []
     content: string
-  }
+  },highlightedBody:string
 }) {
   const categories = blog.category.join(' / ')
+  const $ = cheerio.load(blog.content)
+
+  $('pre code').each((_, elm) => {
+    const result = hljs.highlightAuto($(elm).text())
+    $(elm).html(result.value)
+    $(elm).addClass('hljs')
+  })
   return (
     <>
       <Head>
@@ -45,7 +55,8 @@ export default function Post({
           alt={`${blog.title}のサムネイル`}
           width={'100%'}
         />
-        <div className={`content`} dangerouslySetInnerHTML={{ __html: blog.content }} />
+        <div className={`content`} dangerouslySetInnerHTML={{ __html: $.html() }} />
+        <LinkButton text={`BACK`} href={`/`}/>
       </article>
     </>
   )
@@ -78,3 +89,4 @@ export const getStaticProps: GetStaticProps = async ({ params }) => {
     },
   }
 }
+

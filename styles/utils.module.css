@@ -2,9 +2,9 @@
   font-family: inherit;
   font-size: 80px;
   font-weight: bold;
-  letter-spacing: 0.03em;
+  letter-spacing: -0.01em;
   line-height: 1;
-  color: #1c1c1c;
+  color: #383838;
 }
 
 .fontset_e_m {
@@ -13,7 +13,7 @@
   font-weight: 600;
   letter-spacing: 0.03em;
   line-height: 1;
-  color: #1c1c1c;
+  color: #383838;
 }
 
 .fontset_e_s {
@@ -22,7 +22,7 @@
   font-weight: bold;
   letter-spacing: 0.03em;
   line-height: 1.647;
-  color: #1c1c1c;
+  color: #383838;
 }
 
 .fontset_e_xs {
@@ -40,7 +40,7 @@
   font-weight: bold;
   letter-spacing: 0.02em;
   line-height: 1;
-  color: #1c1c1c;
+  color: #383838;
 }
 
 .fontset_j_m {
@@ -49,7 +49,7 @@
   font-weight: bold;
   letter-spacing: 0.02em;
   line-height: 1.2;
-  color: #1c1c1c;
+  color: #383838;
 }
 
 .fontset_j_s {
@@ -58,7 +58,7 @@
   font-weight: 600;
   letter-spacing: 0.02em;
   line-height: 1.142;
-  color: #1c1c1c;
+  color: #383838;
 }
 
 .fontset_j_xs {
@@ -81,13 +81,13 @@
 
 .main_button {
   font-family: inherit;
-  font-size: 17px;
+  font-size: 12px;
   font-weight: bold;
-  letter-spacing: 0.2em;
+  letter-spacing: 0.1em;
   line-height: 1;
-  color: white;
+  color: #383838;
   text-align: center;
-  background: #36bcac;
+  background: #f4f4f4;
   display: block;
   border: 0;
   border-radius: 9999px;
@@ -95,5 +95,28 @@
   max-height: 50px;
   padding: 15px 0;
   margin: 0 auto;
+  -webkit-transition: .3s;
+  transition: .3s;
+}
+
+.main_button:hover {
+  color: #36bcac;
+  -webkit-transition: .3s;
+  transition: .3s;
+}
+
+.main_shadow {
+  -webkit-box-shadow: 4px 4px 10px #00000021, -4px -4px 5px #ffffff, inset 0 0 30px #00000003;
+          box-shadow: 4px 4px 10px #00000021, -4px -4px 5px #ffffff, inset 0 0 30px #00000003;
+}
+
+.accent_shadow {
+  -webkit-box-shadow: 4px 4px 10px #00000021, -4px -4px 5px #ffffff, inset 0 0 30px #00000003;
+          box-shadow: 4px 4px 10px #00000021, -4px -4px 5px #ffffff, inset 0 0 30px #00000003;
+}
+
+.accent_shadow:hover {
+  -webkit-box-shadow: 4px 4px 5px #36bcac59, -4px -4px 5px #ffffff, inset 0 0 30px #00000003;
+          box-shadow: 4px 4px 5px #36bcac59, -4px -4px 5px #ffffff, inset 0 0 30px #00000003;
 }
 /*# sourceMappingURL=utils.module.css.map */
