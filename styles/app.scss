@@ -39,6 +39,12 @@ li {
   left: 0;
   will-change: transform;
 }
+// TOPページCSS
+.category_box{
+  .active{
+    color: $colorText!important
+  }
+}
 // articleページCSS
 .id_article{
   width: 1112px;

@@ -18,12 +18,11 @@
                 border: none;
                 background: inherit;
                 margin-right: 20px;
+                transition: .3s;
                 &:hover{
                     color: $colorText;
+                    transition: .3s;
                 }
-              }
-            &.active{
-                color: #1d1d1d;
             }
         }
     }

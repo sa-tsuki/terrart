@@ -45,6 +45,10 @@ li {
   will-change: transform;
 }
 
+.category_box .active {
+  color: #383838 !important;
+}
+
 .id_article {
   width: 1112px;
   margin: 0 auto;

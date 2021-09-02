@@ -21,13 +21,13 @@
   border: none;
   background: inherit;
   margin-right: 20px;
+  -webkit-transition: .3s;
+  transition: .3s;
 }
 
 .section .buttons_box button.fontset_e_s:hover {
   color: #383838;
-}
-
-.section .buttons_box button.active {
-  color: #1d1d1d;
+  -webkit-transition: .3s;
+  transition: .3s;
 }
 /*# sourceMappingURL=top.module.css.map */

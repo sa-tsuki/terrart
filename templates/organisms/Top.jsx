@@ -26,6 +26,12 @@ const Top = (props) => {
       searchBlogs = blog
     }
     setBlogs(searchBlogs)
+    const whatButton = document.querySelectorAll('button.category')
+    for (let i = 0; i < whatButton.length; i++) {
+      if (whatButton[i].name === category) {
+        whatButton[i].classList.add('active')
+      }
+    }
   }
   const [blogs, setBlogs] = useState(blog)
 
@@ -39,12 +45,12 @@ const Top = (props) => {
   }, [])
 
   const activeCategory = (e) => {
-    const test = document.querySelectorAll('.category')
+    const category = document.querySelectorAll('.category')
     const target = e.target
-    for (let i = 0; i < test.length; i++) {
-      test[i].classList.remove('top_active__Sf587')
+    for (let i = 0; i < category.length; i++) {
+      category[i].classList.remove('active')
     }
-    target.classList.add('top_active__Sf587')
+    target.classList.add('active')
   }
 
   const categories = [
@@ -66,13 +72,14 @@ const Top = (props) => {
         <h2 className={`${utilsStyles.fontset_e_l} ${topStyles.h2}`}>
           Articles
         </h2>
-        <div className={`${topStyles.buttons_box}`}>
+        <div className={`${topStyles.buttons_box} category_box`}>
           <button
             onClick={(e) => {
               searchCategory('')
               activeCategory(e)
             }}
-            className={`category ${topStyles.fontset_e_s} ${topStyles.active}`}
+            className={`category ${topStyles.fontset_e_s}`}
+            name="all"
           >
             All
           </button>
@@ -85,6 +92,7 @@ const Top = (props) => {
                 }}
                 key={res.category}
                 className={`category ${topStyles.fontset_e_s}`}
+                name={res.name}
               >
                 {res.category}
               </button>
