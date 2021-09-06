@@ -38,11 +38,9 @@ li {
   list-style: none;
 }
 
-#stoker {
-  position: fixed;
-  top: 0;
-  left: 0;
-  will-change: transform;
+video {
+  width: 100%;
+  height: auto;
 }
 
 .category_box .active {

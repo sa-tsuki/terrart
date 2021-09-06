@@ -16,3 +16,6 @@ export { default as FunctionButton } from './FunctionButton'
 
 // TopImage
 export { default as Thumbnail } from './Thumbnail'
+
+// video
+export { default as Video } from './Video'

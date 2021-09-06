@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react'
 import utilsStyles from '../../styles/utils.module.css'
 import topStyles from '../../styles/top.module.css'
 import { ArticleCards, FirstView } from './molecules'
-import { FunctionButton } from './molecules/atoms'
+import { FunctionButton, Video } from './molecules/atoms'
 
 const Top = (props) => {
   const { blog } = props
@@ -67,7 +67,8 @@ const Top = (props) => {
 
   return (
     <>
-      <FirstView />
+      {/* <FirstView /> */}
+      <Video />
       <section className={topStyles.section}>
         <h2 className={`${utilsStyles.fontset_e_l} ${topStyles.h2}`}>
           Articles
