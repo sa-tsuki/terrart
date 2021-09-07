@@ -12,6 +12,8 @@ body {
 * {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
+  z-index: inherit;
+  position: relative;
 }
 
 h1,

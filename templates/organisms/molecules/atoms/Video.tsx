@@ -1,27 +1,15 @@
 import React, { useEffect, useRef, useState } from 'react'
-import style from 'styled-components'
-
-
+import videoStyle from '../../../../styles/video.module.css'
 
 const Video = () => {
 
-    const [number, setNumber] = useState(1)
-
-    const Image = style.div`
-    width: 500px;
-    height: 500px;
-    margin: 80px;
-    position: fixed;
-    background-image: url("/scroll/${number}.jpg");
-    background-repeat: no-repeat;
-    background-size: contain;
-    `
+    const [number, setNumber] = useState(1000)
+    const rate = 0.1
 
     useEffect(() => {
         window.addEventListener("scroll", () => {
-            const offSetY: number = window.pageYOffset
-            console.log(offSetY)
-            if(offSetY > 300) setNumber(100)
+            const offSetY: number = (window.pageYOffset * rate) + 1000
+            setNumber(Math.floor(offSetY))
         })
 
     },[])
@@ -30,8 +18,11 @@ const Video = () => {
 
     return (
         <>
-            <Image ref={ref}>
-            </Image>
+        <section className={`${videoStyle.section}`}>
+            <div ref={ref}>
+                {<img className={`${videoStyle.img}`} src={`/scroll/${number}.jpg`} />}
+            </div>
+        </section>
         </>
       )
 }

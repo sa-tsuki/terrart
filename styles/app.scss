@@ -12,6 +12,8 @@ body {
 }
 * {
   box-sizing: border-box;
+  z-index: inherit;
+  position: relative;
 }
 h1,
 h2,
