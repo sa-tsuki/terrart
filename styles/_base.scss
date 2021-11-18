@@ -15,7 +15,8 @@ $breakpoints: (
 
 // color
 $colorBase: #f4f4f4;
-$colorText: #383838;
+$colorBlack: #1c1c1c;
+$colorWhite: #fff;
 $colorThin: #838383;
 $colorAccent: #36bcac;
 
@@ -33,3 +34,6 @@ $fz_j_xs: 13px;
 
 // font-size Number
 $fz_n_m: 12px;
+
+// max-width
+$max-width: 1040px;

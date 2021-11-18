@@ -1,8 +1,7 @@
-import React, { useState } from 'react'
-import { client } from '../lib/client'
-import Top from '../components/Top'
+import { useEffect, useState } from 'react'
 
-const Home = ({ blog }) => {
+const Top = (props) => {
+  const { blog } = props
 
   // const searchCategory = (category) => {
   //   if (category) {
@@ -64,21 +63,18 @@ const Home = ({ blog }) => {
 
   return (
     <>
-      <Top />
-      <section id="main">
-        TOP
+      <section id="top">
+        <div className="copy">
+          <span>
+            創る、そして想いに応える
+          </span>
+          <h1>
+            <span>Create it</span>
+            <span>by Devel<span className="accent">o</span>ping</span>
+          </h1>
+        </div>
       </section>
     </>
   )
 }
-export default Home
-
-export const getStaticProps = async () => {
-  const data = await client.get({ endpoint: 'products' })
-
-  return {
-    props: {
-      blog: data.contents,
-    },
-  }
-}
+export default Top

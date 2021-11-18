@@ -2,9 +2,9 @@ import React from 'react'
 
 const contact = () => {
     return (
-        <div>
+        <section id="contact">
             Contact page
-        </div>
+        </section>
     )
 }
 export default contact

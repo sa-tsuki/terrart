@@ -1,0 +1,10 @@
+@import './base';
+
+footer{
+    .svg{
+        &.svg-icon{
+            width: 30px;
+            fill: $colorWhite;
+        }
+    }
+}

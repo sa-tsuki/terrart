@@ -2,9 +2,9 @@ import React from 'react'
 
 const about = () => {
     return (
-        <div>
+        <section id="about">
             About page
-        </div>
+        </section>
     )
 }
 export default about

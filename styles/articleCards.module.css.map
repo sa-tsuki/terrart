@@ -1,9 +1,0 @@
-{
-    "version": 3,
-    "mappings": "AAAA,AAAA,GAAG,CAAA;EACC,OAAO,EAAE,IAAI;EACb,SAAS,EAAE,IAAI;EACf,eAAe,EAAE,aAAa;CACjC",
-    "sources": [
-        "articleCards.module.scss"
-    ],
-    "names": [],
-    "file": "articleCards.module.css"
-}

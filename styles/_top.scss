@@ -1,0 +1,35 @@
+@import '_base.scss';
+
+#top{
+    height: 100vh;
+    position: relative;
+    .copy{
+        position: absolute;
+        bottom: 40px;
+        left: 80px;
+        span{
+            font-family: "SF Pro";
+            font-size: 20px;
+            font-weight: 600;
+            letter-spacing: 0.03em;
+            display: block;
+        }
+        span:nth-of-type(1) {
+            margin: 0 0 0 3px;
+        }
+        h1{
+            span{
+                font-size: 100px;
+                letter-spacing: 0;
+                line-height: 0.9em;
+                &.accent{
+                    color: $colorAccent;
+                    display: inline;
+                }
+            }
+            span:nth-of-type(1){
+                margin: 0 0 0 -4px;
+            }
+        }
+    }
+}
