@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 import { client } from '../lib/client'
-import Top from '../components/Top'
+import { Top } from '../components/index'
 
 const Home = ({ blog }) => {
 

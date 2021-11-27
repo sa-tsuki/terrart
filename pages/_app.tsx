@@ -1,13 +1,13 @@
 import { AppProps } from 'next/app'
-// import 'sanitize.css'
 import 'destyle.css'
 import '../styles/style.scss'
-import Header from '../components/Header'
-import Footer from '../components/Footer'
+import { Header, Footer } from '../components/index'
 import Head from 'next/head'
+import { useRouter } from 'next/dist/client/router'
 
 function App({ Component, pageProps }: AppProps) {
-
+  const router = useRouter()
+  console.log(router)
   return (
     <>
       <Head>

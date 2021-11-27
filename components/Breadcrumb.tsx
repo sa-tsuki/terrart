@@ -1,6 +1,6 @@
 import React from 'react'
 
-const Bread = () => {
+const Breadcrumb = () => {
     return (
         <section id="bread">
             パンクず
@@ -8,4 +8,4 @@ const Bread = () => {
     )
 }
 
-export default Bread
+export default Breadcrumb

@@ -1,8 +1,7 @@
 import Link from 'next/link'
 import React from 'react'
-import Bread from './Bread'
-import Github from './parts/Github'
-import Twitter from './parts/Twitter'
+import { Breadcrumb } from './index'
+import { FooterBottom } from './orgs'
 
 const Footer = () => {
 
@@ -10,16 +9,16 @@ const Footer = () => {
 
     return (
         <>
-            <Bread />
+            <Breadcrumb />
             <footer>
-                <div className="content">
+                <div className="contents">
                     <div className="logo">
                         <Link href={'/'}>
                             TERRART
                             {/* <img src="" alt="TERRART トップページ"/> */}
                         </Link>
                     </div>
-                    <div className={`pages`}>
+                    <div className="pages">
                     {pages.map((res,index) => {
                         const lowerCasePage = res.toLowerCase()
                         return (
@@ -29,10 +28,7 @@ const Footer = () => {
                         )
                     })}
                     </div>
-                    <div>
-                        <Twitter />
-                        {/* <Github /> */}
-                    </div>
+                    <FooterBottom />
                 </div>
             </footer>
         </>
