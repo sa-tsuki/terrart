@@ -1,4 +1,5 @@
 import { parseISO, format } from 'date-fns'
+import { memo } from 'react'
 
 const Date = ( props ) => {
   const { date } = props
@@ -9,4 +10,4 @@ const Date = ( props ) => {
     </>
   )
 }
-export default Date
+export default memo(Date)

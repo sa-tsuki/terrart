@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { memo } from 'react'
 
 const Editor = () => {
     return (
@@ -7,4 +7,4 @@ const Editor = () => {
         </div>
     )
 }
-export default Editor
+export default memo(Editor)

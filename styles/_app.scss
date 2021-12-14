@@ -5,10 +5,11 @@ html,
 body {
   padding: 0;
   margin: 0;
-  font-family: "SF Pro JP","SF Pro Display","SF Pro Icons","Hiragino Kaku Gothic Pro","ヒラギノ角ゴ Pro W3","メイリオ","Meiryo","ＭＳ Ｐゴシック","Helvetica Neue","Helvetica","Arial",sans-serif;
-  /* line-height: ; */
-  font-size: 18px;
-  background: $colorBase;
+  font-family: "SF Pro JP","SF Pro Display","SF Pro Icons","Noto Sans Serif","Hiragino Kaku Gothic Pro","ヒラギノ角ゴ Pro W3","メイリオ","Meiryo","ＭＳ Ｐゴシック","Helvetica Neue","Helvetica","Arial",sans-serif;
+  font-size: 16px;
+  font-weight: 600;
+  letter-spacing: 0.03em;
+  line-height: 1;
 }
 * {
   box-sizing: border-box;
@@ -38,6 +39,11 @@ li {
 video {
 width: 100%;
 height: auto;
+}
+.max-width{
+  width: 100%;
+  max-width: 1040px;
+  margin: 0 auto;
 }
 // TOPページCSS
 .category_box{

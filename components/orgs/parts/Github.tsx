@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { memo } from 'react'
 
 const Github = () => {
     return (
@@ -7,4 +7,4 @@ const Github = () => {
         </a>
     )
 }
-export default Github
+export default memo(Github)

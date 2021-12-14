@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { memo } from 'react'
 import { Editor, Github, Rights, Twitter } from './parts'
 
 const FooterBottom = () => {
@@ -14,4 +14,4 @@ const FooterBottom = () => {
     )
 }
 
-export default FooterBottom
+export default memo(FooterBottom)

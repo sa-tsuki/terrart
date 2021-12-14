@@ -1,11 +1,11 @@
-import React from 'react'
+import React, { memo } from 'react'
 
 const Rights = () => {
     return (
         <p>
-            TERRAT ALL Rights Reserved
+            TERRAT All Rights Reserved
         </p>
     )
 }
 
-export default Rights
+export default memo(Rights)

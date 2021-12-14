@@ -1,6 +1,6 @@
-import { useEffect, useState } from 'react'
+import { memo, useEffect, useState } from 'react'
 
-const Top = (props) => {
+const Top = memo((props) => {
   const { blog } = props
 
   // const searchCategory = (category) => {
@@ -76,5 +76,5 @@ const Top = (props) => {
       </section>
     </>
   )
-}
+})
 export default Top

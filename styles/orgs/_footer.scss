@@ -1,4 +1,4 @@
-@import '_base.scss';
+@import '../base';
 
 footer{
     width: 100%;
@@ -38,12 +38,8 @@ footer{
             position: relative;
             .icon{
                 margin: 0 0 0 2px;
-                a{
-                    margin: 0 20px 0 0;
-                }
-                a:last-child{
-                    margin: 0;
-                }
+                display: flex;
+                gap: 0 20px;
             }
             .editor{
                 font-family: "SF Pro";

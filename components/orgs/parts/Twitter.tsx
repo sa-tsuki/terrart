@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { memo } from 'react'
 
 const Twitter = () => {
     return (
@@ -7,4 +7,4 @@ const Twitter = () => {
         </a>
     )
 }
-export default Twitter
+export default memo(Twitter)

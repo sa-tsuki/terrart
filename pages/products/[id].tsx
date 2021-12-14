@@ -1,3 +1,4 @@
+import React, { memo } from 'react'
 import Head from 'next/head'
 import cheerio from 'cheerio';
 import hljs from 'highlight.js'
@@ -5,30 +6,14 @@ import 'highlight.js/styles/nord.css';
 import { client } from '../../lib/client'
 import { GetStaticProps, GetStaticPaths } from 'next'
 
-import Date from '../../components/date'
+import { colorBrewer } from 'react-syntax-highlighter/dist/cjs/styles/hljs';
+import { ProductProducts, SingleProduct } from '../../components/orgs';
+import { Space80 } from '../../components/Space'
 
-export default function Post({
-  blog
-}: {
-  blog: {
-    id: string
-    createdAt: any
-    updatedAt: any
-    publishedAt: any
-    revisedAt: any
-    title: string
-    subtitle: string
-    thumbnail: {
-      url: string
-      height: number
-      width: number
-    }
-    category?: []
-    content: string
-  },highlightedBody:string
-}) {
-  const categories = blog.category.join(' / ')
-  const $ = cheerio.load(blog.content)
+const ProductId = ({ product, products, categories }) => {
+
+  // console.log(products.contents.categories)
+  const $ = cheerio.load(product.content)
 
   $('pre code').each((_, elm) => {
     const result = hljs.highlightAuto($(elm).text())
@@ -38,17 +23,22 @@ export default function Post({
   return (
     <>
       <Head>
-        <title>{blog.title}</title>
+        <title>{product.title}</title>
       </Head>
       <section id="product">
-        Product
+        <div className="max-width">
+            <SingleProduct product={product} />
+            <Space80 />
+            <ProductProducts products={products.contents} categories={categories}/>
+        </div>
       </section>
     </>
   )
 }
+export default memo(ProductId)
 
 // 記事のパスを作成：[id]に代入される
-export const getStaticPaths = async () => {
+export const getStaticPaths: GetStaticPaths = async () => {
   const data: any = await client.get({ endpoint: 'products' })
   const paths = data.contents.map((content) => `/products/${content.id}`)
   return {
@@ -58,9 +48,11 @@ export const getStaticPaths = async () => {
 }
 
 //
-export const getStaticProps: GetStaticProps = async ({ params }) => {
-  const id: any = params.id
-  const data: {
+export const getStaticProps: GetStaticProps = async (context) => {
+  const id: any = context.params.id
+  const products = await client.get({ endpoint: 'products' })
+  const categories = await client.get({ endpoint: 'categories' })
+  const product: {
     endpoint: string
     contentId: string
   } = await client.get({
@@ -70,7 +62,9 @@ export const getStaticProps: GetStaticProps = async ({ params }) => {
 
   return {
     props: {
-      blog: data,
+      product,
+      products,
+      categories
     },
   }
 }

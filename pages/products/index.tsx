@@ -1,43 +1,50 @@
+import React, { memo } from 'react'
 import Head from 'next/head'
 import cheerio from 'cheerio';
 import hljs from 'highlight.js'
 import 'highlight.js/styles/nord.css';
 import { client } from '../../lib/client'
-import { GetStaticProps, GetStaticPaths } from 'next'
+import { GetStaticProps } from 'next'
 
-import Date from '../../components/date'
-import Link from 'next/link';
+import { IndexProducts } from '../../components/orgs';
 
-export default function Post({ blogs }) {
-    console.log(blogs)
+export const ProductsList = React.createContext([])
+export const CategoryLists = React.createContext([])
+
+const ProductsIndex = ({ products, categories }) => {
   return (
     <>
       <Head>
-        <title>{blogs.title}</title>
+        <title>{`test`}</title>
       </Head>
-      <section id="product">
-        Product
-        {blogs.map((blog, index) => {
-            return (
-                <Link href={`/products/${blog.id}`} key={index}>クリック</Link>
-            )
-        })}
-      </section>
+
+      <ProductsList.Provider value={products}>
+        <CategoryLists.Provider value={categories}>
+          <IndexProducts />
+        </CategoryLists.Provider>
+      </ProductsList.Provider>
     </>
   )
 }
+export default memo(ProductsIndex)
 
 //
-export const getStaticProps: GetStaticProps = async ({ params }) => {
-  const data: {
+export const getStaticProps: GetStaticProps = async () => {
+  const products: {
     endpoint: string
   } = await client.get({
     endpoint: 'products'
   })
+  const categories: {
+    endpoint: string
+  } = await client.get({
+    endpoint: 'categories'
+  })
 
   return {
     props: {
-      blogs: data.contents,
+      products: products.contents,
+      categories
     },
   }
 }

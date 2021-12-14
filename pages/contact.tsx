@@ -1,10 +1,12 @@
-import React from 'react'
+import React, { memo } from 'react'
 
 const contact = () => {
     return (
         <section id="contact">
-            Contact page
+            <div className="max-width">
+                Contact page
+            </div>
         </section>
     )
 }
-export default contact
+export default memo(contact)

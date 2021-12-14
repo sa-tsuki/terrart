@@ -1,7 +1,8 @@
 import Head from 'next/head'
 import Link from 'next/link'
+import { memo } from 'react'
 
-export const Archive = ({ children }: { children: React.ReactNode }) => {
+export const Layout = ({ children }: { children: React.ReactNode }) => {
   return (
     <>
       <main>{children}</main>
@@ -9,4 +10,4 @@ export const Archive = ({ children }: { children: React.ReactNode }) => {
   )
 }
 
-export default Archive
+export default memo(Layout)

@@ -1,10 +1,11 @@
-import React from 'react'
+import React, { memo } from 'react'
 import Image from 'next/image'
 import Link from 'next/link'
+import { Github, Twitter } from './orgs/parts'
 
 const Header = () => {
 
-    const pages = ['About', 'Contact']
+    const pages = ['Products', 'Contact']
 
     return (
         <header>
@@ -24,7 +25,11 @@ const Header = () => {
                         )
                     })}
                 </div>
+                <div className="icon">
+                    <Twitter />
+                    <Github />
+                </div>
         </header>
     )
 }
-export default Header
+export default memo(Header)

@@ -1,8 +1,11 @@
-import React, { useState } from 'react'
+import React, { memo, useState } from 'react'
 import { client } from '../lib/client'
-import { Top } from '../components/index'
+import { Top, Main } from '../components/index'
 
-const Home = ({ blog }) => {
+export const ProductsList = React.createContext([])
+export const categoryLists = React.createContext([])
+
+const Home = ({ products, categories }) => {
 
   // const searchCategory = (category) => {
   //   if (category) {
@@ -30,7 +33,7 @@ const Home = ({ blog }) => {
   //     }
   //   }
   // }
-  const [blogs, setBlogs] = useState(blog)
+  const [blogs, setBlogs] = useState(products)
 
   // 初期読み込み時のURLを判断
   // useEffect(() => {
@@ -50,35 +53,27 @@ const Home = ({ blog }) => {
   //   target.classList.add('active')
   // }
 
-  const categories = [
-    { category: 'React', name: 'react' },
-    { category: 'Next', name: 'next' },
-    { category: 'Javascript', name: 'javascript' },
-    { category: 'XD', name: 'xd' },
-    { category: 'Figma', name: 'figma' },
-    { category: 'UI', name: 'ui' },
-    { category: 'UX', name: 'ux' },
-    { category: 'HTML', name: 'html' },
-    { category: 'CSS', name: 'css' },
-  ]
-
   return (
     <>
       <Top />
-      <section id="main">
-        TOP
-      </section>
+      <ProductsList.Provider value={products}>
+        <categoryLists.Provider value={categories}>
+          <Main />
+        </categoryLists.Provider>
+      </ProductsList.Provider>
     </>
   )
 }
-export default Home
+export default memo(Home)
 
 export const getStaticProps = async () => {
-  const data = await client.get({ endpoint: 'products' })
+  const products = await client.get({ endpoint: 'products' })
+  const categories = await client.get({ endpoint: 'categories' })
 
   return {
     props: {
-      blog: data.contents,
+      products: products.contents,
+      categories
     },
   }
 }

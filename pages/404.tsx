@@ -1,7 +1,13 @@
-export default function Custom404() {
-  return (
+import { memo } from "react"
+
+const Custom404 = () => {
+return (
       <section id="notfound">
-        404
+        <div className="max-width">
+          404
+        </div>
       </section>
     )
 }
+
+export default memo(Custom404)

@@ -1,7 +1,9 @@
 import Link from 'next/link'
-import React from 'react'
+import React, { memo } from 'react'
 import { Breadcrumb } from './index'
 import { FooterBottom } from './orgs'
+import { Wave } from './orgs/parts'
+import { Space200 } from './Space'
 
 const Footer = () => {
 
@@ -9,6 +11,7 @@ const Footer = () => {
 
     return (
         <>
+            <Space200 />
             <Breadcrumb />
             <footer>
                 <div className="contents">
@@ -29,9 +32,10 @@ const Footer = () => {
                     })}
                     </div>
                     <FooterBottom />
+                    {/* <Wave /> */}
                 </div>
             </footer>
         </>
     )
 }
-export default Footer
+export default memo(Footer)

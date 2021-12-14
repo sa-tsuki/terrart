@@ -1,1 +1,7 @@
 export { default as FooterBottom } from './FooterBottom'
+export { default as Design } from './Design'
+export { default as Development } from './Development'
+export { default as MainProducts } from './MainProducts'
+export { default as IndexProducts } from './IndexProducts'
+export { default as ProductProducts } from './ProductProducts'
+export { default as SingleProduct } from './SingleProduct'

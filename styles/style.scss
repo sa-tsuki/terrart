@@ -1,8 +1,19 @@
+// components
 @import './app.scss';
-@import './header.scss';
-@import './bread.scss';
-@import './footer.scss';
-@import './top.scss';
-@import './main.scss';
 @import './id.scss';
-@import './svg.scss';
+@import './products.scss';
+@import './product.scss';
+
+// orgs
+@import './orgs/header.scss';
+@import './orgs/bread.scss';
+@import './orgs/footer.scss';
+@import './orgs/top.scss';
+@import './orgs/main.scss';
+@import './orgs/space.scss';
+
+// parts
+@import './orgs/parts/svg.scss';
+@import './orgs/parts/button';
+@import './orgs/parts/productsList';
+@import './orgs/parts/productsHead';

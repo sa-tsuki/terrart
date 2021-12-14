@@ -1,17 +1,19 @@
+import React, { memo } from 'react'
+import Head from 'next/head'
 import { AppProps } from 'next/app'
+import { Header, Footer } from '../components/index'
 import 'destyle.css'
 import '../styles/style.scss'
-import { Header, Footer } from '../components/index'
-import Head from 'next/head'
-import { useRouter } from 'next/dist/client/router'
+
+export const ProductsList = React.createContext([])
 
 function App({ Component, pageProps }: AppProps) {
-  const router = useRouter()
-  console.log(router)
+
   return (
     <>
       <Head>
         <link href="http://fonts.cdnfonts.com/css/sf-pro-display" rel="stylesheet" />
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
       </Head>
 
       <Header />
@@ -20,5 +22,4 @@ function App({ Component, pageProps }: AppProps) {
     </>
   )
 }
-
-export default App
+export default memo(App)
