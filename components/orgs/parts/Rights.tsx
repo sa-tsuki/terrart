@@ -1,11 +1,7 @@
 import React, { memo } from 'react'
 
-const Rights = () => {
-    return (
-        <p>
-            TERRAT All Rights Reserved
-        </p>
-    )
+const Rights: React.VFC = () => {
+  return <p>TERRAT All Rights Reserved</p>
 }
 
 export default memo(Rights)

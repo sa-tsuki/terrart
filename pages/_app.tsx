@@ -8,16 +8,21 @@ import '../styles/style.scss'
 export const ProductsList = React.createContext([])
 
 function App({ Component, pageProps }: AppProps) {
-
   return (
     <>
       <Head>
-        <link href="http://fonts.cdnfonts.com/css/sf-pro-display" rel="stylesheet" />
-        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
+        <link
+          href="http://fonts.cdnfonts.com/css/sf-pro-display"
+          rel="stylesheet"
+        />
+        <link
+          href="https://fonts.googleapis.com/icon?family=Material+Icons"
+          rel="stylesheet"
+        />
       </Head>
 
       <Header />
-        <Component {...pageProps} />
+      <Component {...pageProps} />
       <Footer />
     </>
   )

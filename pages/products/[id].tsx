@@ -1,18 +1,29 @@
 import React, { memo } from 'react'
 import Head from 'next/head'
-import cheerio from 'cheerio';
+import cheerio from 'cheerio'
 import hljs from 'highlight.js'
-import 'highlight.js/styles/nord.css';
+import 'highlight.js/styles/nord.css'
 import { client } from '../../lib/client'
 import { GetStaticProps, GetStaticPaths } from 'next'
 
-import { colorBrewer } from 'react-syntax-highlighter/dist/cjs/styles/hljs';
-import { ProductProducts, SingleProduct } from '../../components/orgs';
+import { colorBrewer } from 'react-syntax-highlighter/dist/cjs/styles/hljs'
+import { ProductProducts, SingleProduct } from '../../components/orgs'
 import { Space80 } from '../../components/Space'
+import {
+  CategoriesContents,
+  Category,
+  Product,
+  ProductsContents,
+} from '../../types/types'
 
-const ProductId = ({ product, products, categories }) => {
+type Props = {
+  product: Product
+  products: ProductsContents
+  categories: CategoriesContents
+}
 
-  // console.log(products.contents.categories)
+const ProductId: React.VFC<Props> = (props) => {
+  const { product, products, categories } = props
   const $ = cheerio.load(product.content)
 
   $('pre code').each((_, elm) => {
@@ -27,9 +38,12 @@ const ProductId = ({ product, products, categories }) => {
       </Head>
       <section id="product">
         <div className="max-width">
-            <SingleProduct product={product} />
-            <Space80 />
-            <ProductProducts products={products.contents} categories={categories}/>
+          <SingleProduct product={product} />
+          <Space80 />
+          <ProductProducts
+            products={products.contents}
+            categories={categories}
+          />
         </div>
       </section>
     </>
@@ -37,25 +51,21 @@ const ProductId = ({ product, products, categories }) => {
 }
 export default memo(ProductId)
 
-// 記事のパスを作成：[id]に代入される
 export const getStaticPaths: GetStaticPaths = async () => {
-  const data: any = await client.get({ endpoint: 'products' })
-  const paths = data.contents.map((content) => `/products/${content.id}`)
+  const products: ProductsContents = await client.get({ endpoint: 'products' })
+  const paths = products.contents.map((content) => `/products/${content.id}`)
+
   return {
     paths,
     fallback: false,
   }
 }
 
-//
 export const getStaticProps: GetStaticProps = async (context) => {
   const id: any = context.params.id
-  const products = await client.get({ endpoint: 'products' })
-  const categories = await client.get({ endpoint: 'categories' })
-  const product: {
-    endpoint: string
-    contentId: string
-  } = await client.get({
+  const products: Product[] = await client.get({ endpoint: 'products' })
+  const categories: Category = await client.get({ endpoint: 'categories' })
+  const product: Product = await client.get({
     endpoint: 'products',
     contentId: id,
   })
@@ -64,8 +74,7 @@ export const getStaticProps: GetStaticProps = async (context) => {
     props: {
       product,
       products,
-      categories
+      categories,
     },
   }
 }
-

@@ -1,8 +1,21 @@
-import { memo, useEffect, useState } from 'react'
+import React, { memo, useState } from 'react'
+import { GetStaticProps } from 'next'
+import { client } from '../lib/client'
 
-const Top = memo((props) => {
-  const { blog } = props
+import { Top, Main } from '../components/index'
 
+import { ProductsContents, CategoriesContents } from '../types/types'
+
+export const ProductsList = React.createContext([])
+export const categoryLists = React.createContext([])
+
+type Props = {
+  products: ProductsContents
+  categories: CategoriesContents
+}
+
+const Home: React.VFC<Props> = (props) => {
+  const { products, categories } = props
   // const searchCategory = (category) => {
   //   if (category) {
   //     history.replaceState('', '', `/?category=category`)
@@ -29,7 +42,7 @@ const Top = memo((props) => {
   //     }
   //   }
   // }
-  const [blogs, setBlogs] = useState(blog)
+  const [blogs, setBlogs] = useState<Props['products']>(products)
 
   // 初期読み込み時のURLを判断
   // useEffect(() => {
@@ -49,32 +62,29 @@ const Top = memo((props) => {
   //   target.classList.add('active')
   // }
 
-  const categories = [
-    { category: 'React', name: 'react' },
-    { category: 'Next', name: 'next' },
-    { category: 'Javascript', name: 'javascript' },
-    { category: 'XD', name: 'xd' },
-    { category: 'Figma', name: 'figma' },
-    { category: 'UI', name: 'ui' },
-    { category: 'UX', name: 'ux' },
-    { category: 'HTML', name: 'html' },
-    { category: 'CSS', name: 'css' },
-  ]
-
   return (
     <>
-      <section id="top">
-        <div className="copy">
-          <span>
-            創る、そして想いに応える
-          </span>
-          <h1>
-            <span>Create it</span>
-            <span>by Devel<span className="accent">o</span>ping</span>
-          </h1>
-        </div>
-      </section>
+      <Top />
+      <ProductsList.Provider value={products.contents}>
+        <categoryLists.Provider value={categories.contents}>
+          <Main />
+        </categoryLists.Provider>
+      </ProductsList.Provider>
     </>
   )
-})
-export default Top
+}
+export default memo(Home)
+
+export const getStaticProps: GetStaticProps = async () => {
+  const products: ProductsContents = await client.get({ endpoint: 'products' })
+  const categories: CategoriesContents = await client.get({
+    endpoint: 'categories',
+  })
+
+  return {
+    props: {
+      products,
+      categories,
+    },
+  }
+}

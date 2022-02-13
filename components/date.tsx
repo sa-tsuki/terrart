@@ -1,12 +1,16 @@
 import { parseISO, format } from 'date-fns'
 import { memo } from 'react'
 
-const Date = ( props ) => {
+type Props = {
+  date: string
+}
+
+const Date: React.VFC<Props> = (props) => {
   const { date } = props
   const parse = parseISO(date)
-  return(
+  return (
     <>
-    <time className={`time`}>{format(parse, 'yyyy.M.d')}</time>
+      <time className={`time`}>{format(parse, 'yyyy.M.d')}</time>
     </>
   )
 }

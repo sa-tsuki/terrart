@@ -1,11 +1,7 @@
 import React, { memo } from 'react'
 
-const Breadcrumb = () => {
-    return (
-        <section id="bread">
-            パンクず
-        </section>
-    )
+const Breadcrumb: React.VFC = () => {
+  return <section id="bread">パンクず</section>
 }
 
 export default memo(Breadcrumb)

@@ -2,7 +2,12 @@ import Head from 'next/head'
 import Link from 'next/link'
 import { memo } from 'react'
 
-export const Layout = ({ children }: { children: React.ReactNode }) => {
+type Props = {
+  children: React.ReactNode
+}
+
+export const Layout: React.VFC<Props> = (props) => {
+  const { children } = props
   return (
     <>
       <main>{children}</main>
