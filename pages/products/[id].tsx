@@ -40,10 +40,7 @@ const ProductId: React.VFC<Props> = (props) => {
         <div className="max-width">
           <SingleProduct product={product} />
           <Space80 />
-          <ProductProducts
-            products={products.contents}
-            categories={categories}
-          />
+          <ProductProducts products={products.contents} />
         </div>
       </section>
     </>
