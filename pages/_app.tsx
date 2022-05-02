@@ -1,9 +1,10 @@
 import React, { memo } from 'react'
 import Head from 'next/head'
 import { AppProps } from 'next/app'
-import { Header, Footer } from '../components/index'
+import { Header, Footer } from '../components/orgs/index'
 import 'destyle.css'
 import '../styles/style.scss'
+import '../styles/globals.css'
 
 export const ProductsList = React.createContext([])
 

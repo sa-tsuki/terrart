@@ -1,19 +1,45 @@
-// components
-@import './app.scss';
-@import './id.scss';
-@import './products.scss';
-@import './product.scss';
+.max-width{
+  max-width: 1440px;
+  margin: 0 auto;
+  padding: 0 5rem;
+}
 
-// orgs
-@import './orgs/header.scss';
-@import './orgs/bread.scss';
-@import './orgs/footer.scss';
-@import './orgs/top.scss';
-@import './orgs/main.scss';
-@import './orgs/space.scss';
+.bg{
+  &-grey{
+    background: #F2F2F2
+  }
+  &-darkGrey{
+    background: #838383;
+  }
+  &-black{
+    background: #1C1C1C
+  }
+}
 
-// parts
-@import './orgs/parts/svg.scss';
-@import './orgs/parts/button';
-@import './orgs/parts/productsList';
-@import './orgs/parts/productsHead';
+.font{
+  &-roboto{
+    font-family: 'Roboto';
+  }
+}
+
+.w{
+  &-card{
+    width: calc(25% - 0.75rem);
+  }
+}
+
+.here{
+  position: relative;
+
+  &:before{
+    position: absolute;
+    content: "";
+    width: 8px;
+    height: 8px;
+    border-radius: 99px;
+    background: #2FA597;
+    top: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+}

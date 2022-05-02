@@ -4,11 +4,11 @@ export type Category = {
   updatedAt: string
   publishedAt: string
   revisedAt: string
-  name: string
-  slug: string
+  category_name: string
+  category_slug: string
 }
 
-export type Product = {
+export type Article = {
   id: string
   createdAt: string
   updatedAt: string
@@ -21,15 +21,21 @@ export type Product = {
     height: number
     width: number
   }
-  category: string[]
+  category: Category
   content: string
-  categories: Category[]
+  component: string
 }
 
-export type ProductsContents = {
-  contents: Product[]
+export type ArticlesContents = {
+  contents: Article[]
+  totalCount: number
+  offset: number
+  limit: number
 }
 
 export type CategoriesContents = {
   contents: Category[]
+  totalCount: number
+  offset: number
+  limit: number
 }
