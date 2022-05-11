@@ -1,5 +1,6 @@
 import React, { memo } from 'react'
 import Head from 'next/head'
+import NextNprogress from 'nextjs-progressbar'
 import { AppProps } from 'next/app'
 import { Header, Footer } from '../components/orgs/index'
 import 'destyle.css'
@@ -23,6 +24,7 @@ function App({ Component, pageProps }: AppProps) {
       </Head>
 
       <Header />
+      <NextNprogress color="#2FA597" height={4} />
       <Component {...pageProps} />
       <Footer />
     </>

@@ -1,34 +1,48 @@
 import React, { memo } from 'react'
 import Link from 'next/link'
-import { TwitterIcon } from '../atoms'
+
+import { TwitterIcon, GithubIcon } from '../atoms'
+import { useMediaQuery } from '../../lib/useMediaQuery'
 
 const Header: React.VFC = () => {
+  // const isPc = useMedia('(min-width: 768px)')
+  const isPc = useMediaQuery(768, 'min')
+
   return (
-    <header className="fixed top-0 left-0 px-20 w-full z-50">
-      <div>ローディングBar</div>
-      <div className="flex items-center justify-between h-25">
+    <header className="w-full fixed top-0 left-0 z-50 md:px-20 sm:px-8 px-4">
+      <div className="flex items-center justify-between md:h-25 h-20">
         <Link href={`/`}>
-          <span className={`text-5xl cursor-pointer font-roboto font-bold`}>
-            TERRART
+          <span
+            className={`md:text-5xl text-xl cursor-pointer font-roboto font-bold`}
+          >
+            PROPS
           </span>
         </Link>
-        <div>
-          <ul className="flex gap-10 items-center">
-            <li className="text-base font-bold cursor-pointer here">
-              <Link href="/">Articles</Link>
-            </li>
-            <li className="text-base font-bold cursor-not-allowed line-through">
-              Products
-            </li>
-            {/* <li><Link href="/products">Products</Link></li> */}
-          </ul>
-        </div>
+        {isPc ? (
+          <div>
+            <ul className="flex gap-10 items-center">
+              <li className="text-base font-bold cursor-pointer here">
+                <Link href="/">Articles</Link>
+              </li>
+              <li className="text-base font-bold cursor-not-allowed line-through">
+                Products
+              </li>
+              {/* <li><Link href="/products">Products</Link></li> */}
+            </ul>
+          </div>
+        ) : (
+          '□'
+        )}
       </div>
-      <div className="fixed bottom-20 right-20 flex flex-col gap-8">
-        <a href="" target="_blank">
-          <TwitterIcon />
+      <div className="fixed bottom-20 md:right-20 sm:right-8 flex-col gap-8 md:flex hidden">
+        <a href="https://github.com/sa-tsuki" target="_blank" rel="noreferrer">
+          <GithubIcon />
         </a>
-        <a href="" target="_blank">
+        <a
+          href="https://twitter.com/_sa_tsuki"
+          target="_blank"
+          rel="noreferrer"
+        >
           <TwitterIcon />
         </a>
       </div>

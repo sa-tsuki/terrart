@@ -24,6 +24,7 @@ export type Article = {
   category: Category
   content: string
   component: string
+  github: string
 }
 
 export type ArticlesContents = {

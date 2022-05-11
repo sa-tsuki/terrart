@@ -1,13 +1,12 @@
 import React, { memo } from 'react'
 import Head from 'next/head'
-import cheerio from 'cheerio'
-import hljs from 'highlight.js'
-import 'highlight.js/styles/nord.css'
 import { client } from '../lib/client'
 import { GetStaticProps, GetStaticPaths } from 'next'
 import dynamic from 'next/dynamic'
 
 import { Article, ArticlesContents } from '../types/types'
+import { Component, Design } from '../components/orgs'
+import Link from 'next/link'
 
 type Props = {
   article: Article
@@ -16,28 +15,41 @@ type Props = {
 
 const ArticleId: React.VFC<Props> = (props) => {
   const { article } = props
-  // const $ = cheerio.load(article.content)
-  console.log(article)
-  const DynamicComponent = dynamic(
-    () => import(`../articles/${article.component}/index`),
-  )
 
-  // $('pre code').each((_, elm) => {
-  //   const result = hljs.highlightAuto($(elm).text())
-  //   $(elm).html(result.value)
-  //   $(elm).addClass('hljs')
-  // })
   return (
     <>
       <Head>
         <title>{article.title}</title>
       </Head>
-      <main className="max-with mt-90 pb-40">
-        <div>{article.title}</div>
-        <div>{article.subtitle}</div>
-        {/* <img src={article.thumbnail.url} alt={article.title} /> */}
-        <DynamicComponent />
+      <div className="fixed md:top-25 top-14 left-0 flex items-center gap-x-10 h-10  md:px-21 sm:px-8 px-4">
+        <Link href="/">
+          <span className="relative md:text-base text-xs text-gray-400 font-semibold cursor-pointer transition duration-200 hover:text-gray-700 before:text-gray-400 before:absolute before:content-['-'] before:text-grey-50 before:top-1/2 before:-right-5 before:-translate-y-1/2 before:pointer-events-none">
+            Home
+          </span>
+        </Link>
+        <span className="md:text-base text-xs text-gray-400 font-semibold">
+          {article.title}
+        </span>
+      </div>
+      <main className="max-width md:mt-64 mt-40 pb-40">
+        {article.component ? (
+          <Component article={article} />
+        ) : (
+          <Design article={article} />
+        )}
       </main>
+      <div className="bg-darkGrey ">
+        <div className="max-width flex items-center gap-x-10 h-10">
+          <Link href="/">
+            <span className="relative md:text-base text-xs text-gray-400 font-semibold cursor-pointer transition duration-200 hover:text-gray-100 before:text-gray-400 before:absolute before:content-['-'] before:text-grey-50 before:top-1/2 before:-right-5 before:-translate-y-1/2 before:pointer-events-none">
+              Home
+            </span>
+          </Link>
+          <span className="md:text-base text-xs text-gray-50 font-semibold">
+            {article.title}
+          </span>
+        </div>
+      </div>
     </>
   )
 }

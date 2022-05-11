@@ -39,9 +39,9 @@ const Home: React.VFC<Props> = (props) => {
                             <div className="mb-1 group-hover:scale-105 border-solid border-gray-200 border transition duration-200 rounded-lg overflow-hidden">
                               <img
                                 src={
-                                  article.thumbnail.url
+                                  article.thumbnail
                                     ? article.thumbnail.url
-                                    : 'images/img.gif'
+                                    : 'images/Mockup.jpg'
                                 }
                                 alt={article.title}
                                 className=" object-cover"
@@ -62,18 +62,6 @@ const Home: React.VFC<Props> = (props) => {
         </main>
         <div className="bg-darkGrey ">
           <div className="max-width flex items-center gap-x-10 h-10">
-            <Link href="/">
-              <span className="relative text-base text-gray-400 font-semibold cursor-pointer transition duration-200 hover:text-gray-100 before:text-gray-400 before:absolute before:content-['-'] before:text-grey-50 before:top-1/2 before:-right-5 before:-translate-y-1/2 before:pointer-events-none">
-                Home
-              </span>
-            </Link>
-
-            <Link href="/">
-              <span className="relative text-base text-gray-400 font-semibold cursor-pointer transition duration-200 hover:text-gray-100 before:text-gray-400 before:absolute before:content-['-'] before:text-grey-50 before:top-1/2 before:-right-5 before:-translate-y-1/2 before:pointer-events-none">
-                Home
-              </span>
-            </Link>
-
             <span className="text-base text-gray-50 font-semibold">Home</span>
           </div>
         </div>

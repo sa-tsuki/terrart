@@ -1,7 +1,7 @@
-import React from 'react'
+import React, { memo } from 'react'
 
-const index = () => {
-  return <div>index2</div>
+const index: React.VFC = () => {
+  return <div className="flex justify-center bg-white">テスト</div>
 }
 
-export default index
+export default memo(index)

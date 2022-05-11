@@ -2,6 +2,7 @@ module.exports = {
   content: [
     './pages/**/*.{js,ts,jsx,tsx}',
     './components/**/*.{js,ts,jsx,tsx}',
+    './articles/**/*.{js,ts,jsx,tsx}',
   ],
   theme: {
     fontFamily: {
@@ -18,7 +19,9 @@ module.exports = {
     background: {},
     extend: {
       spacing: {
+        21: '5.25rem',
         25: '6.25rem',
+        64: '16rem',
         90: '22.5rem',
       },
     },
