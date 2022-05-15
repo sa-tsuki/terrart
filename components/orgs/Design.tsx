@@ -3,11 +3,11 @@ import dayjs from 'dayjs'
 import hljs from 'highlight.js'
 import 'highlight.js/styles/a11y-dark.css'
 
-import { Article } from '../../types/types'
+import { ArticleType } from '../../types/types'
 import { BlankIcon } from '../atoms'
 
 type Props = {
-  article: Article
+  article: ArticleType
 }
 
 const Design: React.VFC<Props> = (props) => {
