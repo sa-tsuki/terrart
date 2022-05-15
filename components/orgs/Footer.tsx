@@ -5,7 +5,6 @@ import { useMediaQuery } from '../../lib/useMediaQuery'
 import { GithubIcon, TwitterIcon } from '../atoms'
 
 const Footer: React.VFC = () => {
-  // const isPc = useMedia('(min-width: 768px)')
   const isPc = useMediaQuery(768, 'min')
 
   return (
@@ -14,7 +13,7 @@ const Footer: React.VFC = () => {
         {isPc ? (
           <Link href={`/`}>
             <span className="md:text-5xl text-xl cursor-pointer font-roboto font-bold mb-3">
-              PROPS
+              TERRART
             </span>
           </Link>
         ) : (
@@ -30,6 +29,7 @@ const Footer: React.VFC = () => {
                 href="https://github.com/sa-tsuki"
                 target="_blank"
                 rel="noreferrer"
+                className="transition duration-200 hover:scale-110"
               >
                 <GithubIcon width={40} />
               </a>
@@ -37,6 +37,7 @@ const Footer: React.VFC = () => {
                 href="https://twitter.com/_sa_tsuki"
                 target="_blank"
                 rel="noreferrer"
+                className="transition duration-200 hover:scale-110"
               >
                 <TwitterIcon width={40} />
               </a>
@@ -45,7 +46,7 @@ const Footer: React.VFC = () => {
         )}
         <div className="md:mb-28 mb-16 md:mt-0 mt-16">
           <ul className="flex md:gap-10 gap-5 md:items-center items-start md:flex-row flex-col">
-            <li className="md:text-base text-xl font-bold cursor-pointer">
+            <li className="md:text-base text-xl font-bold cursor-pointer here here-hover">
               <Link href="/">Articles</Link>
             </li>
             <li className="md:text-base text-xl font-bold cursor-not-allowed line-through">
@@ -61,6 +62,7 @@ const Footer: React.VFC = () => {
                 href="https://github.com/sa-tsuki"
                 target="_blank"
                 rel="noreferrer"
+                className="transition duration-200 hover:scale-110"
               >
                 <GithubIcon />
               </a>
@@ -68,6 +70,7 @@ const Footer: React.VFC = () => {
                 href="https://twitter.com/_sa_tsuki"
                 target="_blank"
                 rel="noreferrer"
+                className="transition duration-200 hover:scale-110"
               >
                 <TwitterIcon />
               </a>
@@ -75,7 +78,7 @@ const Footer: React.VFC = () => {
           ) : (
             <Link href={`/`}>
               <span className="md:text-5xl text-xl -mb-3 cursor-pointer font-roboto font-bold">
-                PROPS
+                TERRART
               </span>
             </Link>
           )}
@@ -85,7 +88,7 @@ const Footer: React.VFC = () => {
         </div>
         <div className="w-full h-1 bg-gray-50 rounded-full my-2"></div>
         <div className="text-xs text-gray-500 font-bold -mt-1">
-          PROPS All Rights Reserved
+          TERRART All Rights Reserved
         </div>
       </div>
     </footer>

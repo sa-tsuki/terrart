@@ -1,11 +1,15 @@
 import React, { memo } from 'react'
 import { GetStaticProps } from 'next'
-import Link from 'next/link'
 
 import { client } from '../lib/client'
-import { ArticlesContents, CategoriesContents, Article } from '../types/types'
+import {
+  ArticlesContents,
+  CategoriesContents,
+  ArticleType,
+} from '../types/types'
+import { Article, NotReady } from '../components/moles'
 
-export const ArticlesList = React.createContext<Article[]>([])
+export const ArticlesList = React.createContext<ArticleType[]>([])
 
 type Props = {
   articles: ArticlesContents
@@ -29,32 +33,21 @@ const Home: React.VFC<Props> = (props) => {
                   {category.category_name}
                 </div>
                 <div className="flex flex-wrap gap-x-4 gap-y-8">
-                  {articles.contents.map((article) => {
-                    if (
-                      category.category_slug === article.category.category_slug
-                    ) {
-                      return (
-                        <Link key={article.id} href={`/${article.id}`}>
-                          <div className="w-card cursor-pointer group ">
-                            <div className="mb-1 group-hover:scale-105 border-solid border-gray-200 border transition duration-200 rounded-lg overflow-hidden">
-                              <img
-                                src={
-                                  article.thumbnail
-                                    ? article.thumbnail.url
-                                    : 'images/Mockup.jpg'
-                                }
-                                alt={article.title}
-                                className=" object-cover"
-                              />
-                            </div>
-                            <div className="text-sm font-bold ml-1 leading-tight">
-                              {article.title}
-                            </div>
-                          </div>
-                        </Link>
-                      )
-                    }
-                  })}
+                  {articles.contents.some(
+                    (aritcle) =>
+                      aritcle.category.category_slug === category.category_slug,
+                  ) ? (
+                    articles.contents.map((article) => {
+                      if (
+                        category.category_slug ===
+                        article.category.category_slug
+                      ) {
+                        return <Article article={article} key={article.title} />
+                      }
+                    })
+                  ) : (
+                    <NotReady />
+                  )}
                 </div>
               </section>
             )

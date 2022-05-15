@@ -12,13 +12,14 @@ a{
   margin: 0 auto;
   padding: 0 1rem;
 
-
-  @media screen and (min-width: 768px){
-  padding: 0 5rem;
-  }
-
   @media screen and (min-width: 640px){
     padding: 0 2rem;
+  }
+
+  @media screen and (min-width: 768px){
+  }
+
+  @media screen and (min-width: 1024px){
   }
 }
 
@@ -66,7 +67,15 @@ a{
 
 .w{
   &-card{
-    width: calc(25% - 0.75rem);
+    width: calc(100%);
+
+    @media screen and (min-width: 768px){
+      width: calc(50% - 0.75rem);
+    }
+
+    @media screen and (min-width: 1024px){
+      width: calc(25% - 0.75rem);
+    }
   }
 }
 
@@ -83,6 +92,31 @@ a{
     top: -10px;
     left: 50%;
     transform: translateX(-50%);
+    opacity: 1!important;
+  }
+}
+
+.here-hover{
+  position: relative;
+
+  &:before{
+    position: absolute;
+    content: "";
+    width: 8px;
+    height: 8px;
+    border-radius: 99px;
+    background: #2FA597;
+    top: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+    opacity: 0;
+    transition-property: opacity;
+    transition-duration: .2s;
+  }
+
+  &:hover:before{
+    opacity: 1;
+
   }
 }
 

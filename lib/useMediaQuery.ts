@@ -18,6 +18,7 @@ export const useMediaQuery = (
 
   useEffect(() => {
     window.addEventListener('resize', setEvent)
+    setEvent()
 
     return () => {
       window.removeEventListener('resize', setEvent)

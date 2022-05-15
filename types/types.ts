@@ -8,7 +8,7 @@ export type Category = {
   category_slug: string
 }
 
-export type Article = {
+export type ArticleType = {
   id: string
   createdAt: string
   updatedAt: string
@@ -28,7 +28,7 @@ export type Article = {
 }
 
 export type ArticlesContents = {
-  contents: Article[]
+  contents: ArticleType[]
   totalCount: number
   offset: number
   limit: number

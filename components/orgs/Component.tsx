@@ -2,11 +2,11 @@ import React, { memo } from 'react'
 import dynamic from 'next/dynamic'
 import dayjs from 'dayjs'
 
-import { Article } from '../../types/types'
+import { ArticleType } from '../../types/types'
 import { BlankIcon } from '../atoms'
 
 type Props = {
-  article: Article
+  article: ArticleType
 }
 
 const Component: React.VFC<Props> = (props) => {
@@ -20,7 +20,6 @@ const Component: React.VFC<Props> = (props) => {
   const DynamicComponent = dynamic(
     () => import(`../../articles/${article.component}/index`),
   )
-
   return (
     <>
       <div className="mb-20">
