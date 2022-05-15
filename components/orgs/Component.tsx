@@ -19,6 +19,7 @@ const Component: React.VFC<Props> = (props) => {
 
   const DynamicComponent = dynamic(
     () => import(`../../articles/${article.component}/index`),
+    { ssr: false },
   )
   return (
     <>
