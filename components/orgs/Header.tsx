@@ -3,6 +3,7 @@ import Link from 'next/link'
 
 import { TwitterIcon, GithubIcon } from '../atoms'
 import { useMediaQuery } from '../../lib/useMediaQuery'
+import { Hamburger } from '../moles'
 
 const Header: React.VFC = () => {
   const isPc = useMediaQuery(768, 'min')
@@ -12,7 +13,7 @@ const Header: React.VFC = () => {
       <div className="flex items-center justify-between md:h-25 h-20">
         <Link href={`/`}>
           <span
-            className={`md:text-5xl text-xl cursor-pointer font-roboto font-bold`}
+            className={`md:text-5xl text-xl cursor-pointer font-roboto font-bold relative z-50`}
           >
             TERRART
           </span>
@@ -30,7 +31,7 @@ const Header: React.VFC = () => {
             </ul>
           </div>
         ) : (
-          '□'
+          <Hamburger />
         )}
       </div>
       <div className="fixed bottom-20 sm:right-8 flex-col gap-8 md:flex hidden">

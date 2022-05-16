@@ -9,9 +9,11 @@ module.exports = {
       roboto: ['Roboto'],
     },
     fontSize: {
+      xxs: '0.5rem',
       xs: '0.8125rem',
       sm: '0.875rem',
       base: '1rem',
+      md: '1.375rem',
       xl: '2rem',
       '5xl': '3.75rem',
     },

@@ -29,7 +29,7 @@ const Home: React.VFC<Props> = (props) => {
                 key={category.category_name}
                 className={`${index !== 0 ? 'mt-20' : ''}`}
               >
-                <div className="text-xl font-bold mb-2">
+                <div className="md:text-xl text-md font-bold mb-2">
                   {category.category_name}
                 </div>
                 <div className="flex flex-wrap gap-x-4 gap-y-8">
@@ -55,7 +55,9 @@ const Home: React.VFC<Props> = (props) => {
         </main>
         <div className="bg-darkGrey ">
           <div className="max-width flex items-center gap-x-10 h-10">
-            <span className="text-base text-gray-50 font-semibold">Home</span>
+            <span className="sm:text-base text-xs text-gray-50 font-semibold">
+              Home
+            </span>
           </div>
         </div>
       </ArticlesList.Provider>

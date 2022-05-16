@@ -24,7 +24,7 @@ a{
 }
 
 .bg{
-  &-grey{
+  &-gray{
     background: #F2F2F2
   }
   &-darkGrey{
@@ -111,12 +111,23 @@ a{
     transform: translateX(-50%);
     opacity: 0;
     transition-property: opacity;
-    transition-duration: .2s;
+    transition-duration: .3s;
   }
 
   &:hover:before{
     opacity: 1;
 
+  }
+}
+
+.hamburger{
+  transition-property: opacity;
+  transition-duration: .4s;
+  opacity: 0;
+  pointer-events: none;
+  &.on{
+    opacity: 1;
+    pointer-events: unset;
   }
 }
 
