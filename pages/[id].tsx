@@ -22,11 +22,11 @@ const ArticleId: React.VFC<Props> = (props) => {
       </Head>
       <div className="fixed md:top-25 top-14 left-0 flex items-center gap-x-10 h-10 sm:px-8 px-4">
         <Link href="/">
-          <span className="relative md:text-base text-xs text-gray-400 font-semibold cursor-pointer transition duration-200 hover:text-gray-700 before:text-gray-400 before:absolute before:content-['-'] before:text-grey-50 before:top-1/2 before:-right-5 before:-translate-y-1/2 before:pointer-events-none">
+          <span className="relative md:text-base text-xs text-stone-400 font-semibold cursor-pointer transition duration-200 hover:text-stone-700 before:text-stone-400 before:absolute before:content-['-'] before:text-grey-50 before:top-1/2 before:-right-5 before:-translate-y-1/2 before:pointer-events-none">
             Home
           </span>
         </Link>
-        <span className="md:text-base text-xs text-gray-700 font-semibold">
+        <span className="md:text-base text-xs text-stone-700 font-semibold">
           {article.title}
         </span>
       </div>
@@ -40,11 +40,11 @@ const ArticleId: React.VFC<Props> = (props) => {
       <div className="bg-darkGrey ">
         <div className="max-width flex items-center gap-x-10 h-10">
           <Link href="/">
-            <span className="relative md:text-base text-xs text-gray-400 font-semibold cursor-pointer transition duration-200 hover:text-gray-100 before:text-gray-400 before:absolute before:content-['-'] before:text-grey-50 before:top-1/2 before:-right-5 before:-translate-y-1/2 before:pointer-events-none">
+            <span className="relative md:text-base text-xs text-stone-400 font-semibold cursor-pointer transition duration-200 hover:text-stone-100 before:text-stone-400 before:absolute before:content-['-'] before:text-grey-50 before:top-1/2 before:-right-5 before:-translate-y-1/2 before:pointer-events-none">
               Home
             </span>
           </Link>
-          <span className="md:text-base text-xs text-gray-50 font-semibold">
+          <span className="md:text-base text-xs text-stone-50 font-semibold">
             {article.title}
           </span>
         </div>

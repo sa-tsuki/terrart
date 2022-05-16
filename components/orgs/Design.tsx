@@ -34,7 +34,7 @@ const Design: React.VFC<Props> = (props) => {
         {article.github && (
           <div className="ml-1">
             <a
-              className="text-base text-gray-400 font-bold inline-flex gap-2 transition duration-200 hover:text-gray-900"
+              className="text-base text-stone-400 font-bold inline-flex gap-2 transition duration-200 hover:text-stone-900"
               href={`https://github.com/sa-tsuki/${article.github}`}
               target="_blank"
               rel="noreferrer"
@@ -44,7 +44,7 @@ const Design: React.VFC<Props> = (props) => {
             </a>
           </div>
         )}
-        <div className="ml-1 text-xs text-gray-400 font-bold">
+        <div className="ml-1 text-xs text-stone-400 font-bold">
           {formatedDate()}
         </div>
       </div>

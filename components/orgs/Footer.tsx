@@ -8,8 +8,8 @@ const Footer: React.VFC = () => {
   const isPc = useMediaQuery(768, 'min')
 
   return (
-    <footer className="bg-gray-900">
-      <div className="max-width text-gray-50 pt-12 pb-8">
+    <footer className="bg-stone-900">
+      <div className="max-width text-stone-50 pt-12 pb-8">
         {isPc ? (
           <Link href={`/`}>
             <span className="md:text-5xl text-xl cursor-pointer font-roboto font-bold mb-3">
@@ -18,13 +18,13 @@ const Footer: React.VFC = () => {
           </Link>
         ) : (
           <div className="rounded-3xl bg-slate-50 pt-8 pb-6 flex items-center flex-col">
-            <div className="text-md text-gray-700 font-bold -mt-4">
+            <div className="text-md text-stone-700 font-bold -mt-4">
               Other Spaces
             </div>
-            <div className="text-xs text-gray-400 font-bold">
+            <div className="text-xs text-stone-400 font-bold">
               Let&apos;s jump into them
             </div>
-            <div className="flex items-center gap-16 text-gray-900 mt-5">
+            <div className="flex items-center gap-16 text-stone-900 mt-5">
               <a
                 href="https://github.com/sa-tsuki"
                 target="_blank"
@@ -87,7 +87,7 @@ const Footer: React.VFC = () => {
           </div>
         </div>
         <div className="w-full h-1 bg-gray-50 rounded-full my-2"></div>
-        <div className="sm:text-xs text-xxs text-gray-500 font-bold -mt-1">
+        <div className="sm:text-xs text-xxs text-stone-500 font-bold -mt-1">
           TERRART All Rights Reserved
         </div>
       </div>

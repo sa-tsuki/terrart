@@ -27,6 +27,7 @@ export default function App({ Component, pageProps }: AppProps) {
           href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap"
           rel="stylesheet"
         ></link>
+        <title>TERRART</title>
       </Head>
 
       <Header />

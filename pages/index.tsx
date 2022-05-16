@@ -55,7 +55,7 @@ const Home: React.VFC<Props> = (props) => {
         </main>
         <div className="bg-darkGrey ">
           <div className="max-width flex items-center gap-x-10 h-10">
-            <span className="sm:text-base text-xs text-gray-50 font-semibold">
+            <span className="sm:text-base text-xs text-stone-50 font-semibold">
               Home
             </span>
           </div>
