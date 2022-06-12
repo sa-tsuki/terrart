@@ -18,7 +18,7 @@ const ArticleId: React.VFC<Props> = (props) => {
   return (
     <>
       <Head>
-        <title>TERRTR | {article.title}</title>
+        <title>TERRART | {article.title}</title>
       </Head>
       <div className="fixed md:top-25 top-14 left-0 flex items-center gap-x-10 h-10 sm:px-8 px-4">
         <Link href="/">
