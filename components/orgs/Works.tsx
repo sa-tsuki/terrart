@@ -9,7 +9,7 @@ type Props = {
   article: ArticleType
 }
 
-const Component: React.VFC<Props> = (props) => {
+const Works = (props: Props): JSX.Element => {
   const { article } = props
 
   const formatedDate = () => {
@@ -24,7 +24,7 @@ const Component: React.VFC<Props> = (props) => {
 
   return (
     <>
-      <div className="mb-20">
+      <div className="mb-20 sm:px-8 px-4">
         <div className="mb-2">
           <div className="text-xl font-bold">{article.title}</div>
           {article.subtitle && (
@@ -48,11 +48,9 @@ const Component: React.VFC<Props> = (props) => {
           {formatedDate()}
         </div>
       </div>
-      <div className="bg-conponent">
-        <DynamicComponent />
-      </div>
+      <DynamicComponent />
     </>
   )
 }
 
-export default memo(Component)
+export default memo(Works)

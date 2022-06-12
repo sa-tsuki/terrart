@@ -24,6 +24,7 @@ export type ArticleType = {
   category: Category
   content: string
   component: string
+  fullwidth: boolean
   github: string
 }
 

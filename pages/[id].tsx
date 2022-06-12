@@ -3,7 +3,7 @@ import Head from 'next/head'
 import Link from 'next/link'
 import React, { memo } from 'react'
 
-import { Component, Design } from '../components/orgs'
+import { Component, Design, Works } from '../components/orgs'
 import { client } from '../lib/client'
 import { ArticleType, ArticlesContents } from '../types/types'
 
@@ -18,7 +18,7 @@ const ArticleId: React.VFC<Props> = (props) => {
   return (
     <>
       <Head>
-        <title>{article.title}</title>
+        <title>TERRTR | {article.title}</title>
       </Head>
       <div className="fixed md:top-25 top-14 left-0 flex items-center gap-x-10 h-10 sm:px-8 px-4">
         <Link href="/">
@@ -30,13 +30,19 @@ const ArticleId: React.VFC<Props> = (props) => {
           {article.title}
         </span>
       </div>
-      <main className="max-width md:mt-64 mt-40 pb-40">
-        {article.component ? (
-          <Component article={article} />
-        ) : (
-          <Design article={article} />
-        )}
-      </main>
+      {article.fullwidth ? (
+        <main className="md:mt-64 mt-40 pb-40">
+          <Works article={article} />
+        </main>
+      ) : (
+        <main className="max-width md:mt-64 mt-40 pb-40">
+          {article.component ? (
+            <Component article={article} />
+          ) : (
+            <Design article={article} />
+          )}
+        </main>
+      )}
       <div className="bg-darkGrey ">
         <div className="max-width flex items-center gap-x-10 h-10">
           <Link href="/">
