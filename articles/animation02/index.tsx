@@ -14,7 +14,6 @@ let camera: THREE.PerspectiveCamera,
 const init = () => {
   const width = document.getElementById('l-canvas')?.offsetWidth as number
   const height = document.getElementById('l-canvas')?.offsetHeight as number
-  // const height = 500
 
   // renderer
   renderer = new THREE.WebGLRenderer({
