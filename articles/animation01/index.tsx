@@ -5,8 +5,8 @@ import * as THREE from 'three'
 
 const init = () => {
   const width = document.getElementById('l-canvas')?.offsetWidth as number
-  // const height = document.getElementById('l-canvas')?.offsetHeight as number
-  const height = 500
+  const height = document.getElementById('l-canvas')?.offsetHeight as number
+  // const height = 500
 
   // renderer
   const renderer = new THREE.WebGLRenderer({
@@ -81,13 +81,15 @@ const init = () => {
   }
 
   function onWindowResize() {
+    const width = document.getElementById('l-canvas')?.offsetWidth as number
+    const height = document.getElementById('l-canvas')?.offsetHeight as number
+
     renderer.setSize(width, height)
     camera.aspect = width / height
     camera.updateProjectionMatrix()
   }
 
   animetion()
-
   window.addEventListener('resize', onWindowResize)
 }
 
