@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Progrative | Advanced | Level2</title>
+
+    <!-- CSS 読み込み -->
+    <link rel="stylesheet" href="./assets/css/style.css" />
+
+    <!-- google font 読み込み -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@100;200;300;400;500;600;700;800;900&family=Roboto:wght@100;300;400;500;700;900&display=swap" rel="stylesheet" />
+
+    <!-- Tailwind 読み込み -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            fontSize: {
+              xs: ".625rem",
+              sm: ".75rem",
+              base: "0.875rem",
+              lg: "1rem",
+              xl: "1.25rem",
+              "2xl": "1.5rem",
+              "3xl": "2.375rem",
+              "4xl": "2.75rem",
+              "5xl": "3rem",
+              "6xl": "3.5rem",
+            },
+            colors: {
+              black: "#3f3f3f",
+              gray1: "#7e7e7e",
+              gray2: "#e1e1e1",
+              accent: "#2FA597",
+            },
+          },
+        },
+      };
+    </script>
+
+    <!-- JS 読み込み -->
+    <script defer src="./assets/js/index.js"></script>
+  </head>
+
+  <body>
+    <header class="sticky w-full left-0 top-0">
+      <div class="text-3xl px-14 font-bold mt-4">
+        <span>Progrative</span>
+        <span class="text-base text-gray1">
+          <span class=""> by</span>
+          <span class="font-roboto"> TERRART</span>
+        </span>
+      </div>
+    </header>
+
+    <main class="max-w-5xl mx-auto">
+      <div class="min-h-[calc(100vh-73px-26px)] flex justify-start items-center">
+        <div>
+          <div class="text-3xl">Advanced - Level 2</div>
+          <div class="text-xl">
+            <div class="font-noto font-bold">・const, let, varの違いを理解する</div>
+            <div class="font-noto font-bold">・APIを利用する（非同期処理）</div>
+            <div class="font-noto font-bold">・イベントハンドラーを使って天気予報取得先を変更する</div>
+            <div class="font-noto font-bold pl-5">・addEventListener( "change" )</div>
+            <div class="font-noto font-bold">・取得した内容によって表示する画像を変更する</div>
+            <div class="font-noto font-bold">・取得失敗時の実装をする（エラーハンドリング）</div>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <footer class="bg-black text-white py-1">
+      <div class="flex justify-center items-center text-sm text-gray1 font-noto font-bold">© Progrative by <span class="font-roboto ml-1"> TERRART 2022</span>.</div>
+    </footer>
+
+    <div id="sidebar" class="bg-white fixed top-0 right-0 min-h-full px-4 pt-20 pb-1 border-l border-black min-w-[472px]">
+      <div class="absolute left-4 top-4 cursor-pointer w-[24px]"><img src="./assets/images/button_arrow-close.svg" alt="" /></div>
+
+      <!-- サイドバーコンテンツ 1 -->
+      <div class="mb-10">
+        <!-- コンテンツ ヘッド -->
+        <div class="mb-2">
+          <div class="flex items-center ml-1">
+            <span class="text-xl whitespace-nowrap">天気予報 -</span>
+            <div class="relative before:absolute before:top-1/2 before:right-1 before:content-[url('./assets/images/button_arrow.svg')] before:-translate-y-1/2 w-full before:pointer-events-none">
+              <select id="place" class="text-[32px] ml-1 w-full appearance-none">
+                <optgroup label="北海道">
+                  <option value="011000">稚内</option>
+                  <option value="012010">旭川</option>
+                  <option value="016010">留萌</option>
+                  <option value="016010">札幌</option>
+                  <option value="016020">岩見沢</option>
+                  <option value="016030">倶知安</option>
+                  <option value="013010">網走</option>
+                  <option value="013020">北見</option>
+                  <option value="013030">紋別</option>
+                  <option value="014010">根室</option>
+                  <option value="014020">釧路</option>
+                  <option value="014030">帯広</option>
+                  <option value="015010">室蘭</option>
+                  <option value="015020">浦河</option>
+                  <option value="017010">函館</option>
+                  <option value="017020">江差</option>
+                </optgroup>
+                <optgroup label="青森">
+                  <option value="020010">青森</option>
+                  <option value="020020">むつ</option>
+                  <option value="020030">八戸</option>
+                </optgroup>
+                <optgroup label="岩手">
+                  <option value="030010">盛岡</option>
+                  <option value="030020">宮古</option>
+                  <option value="030030">大船渡</option>
+                </optgroup>
+                <optgroup label="福岡">
+                  <option value="400040">久留米</option>
+                </optgroup>
+              </select>
+            </div>
+          </div>
+        </div>
+
+        <!-- コンテンツ ボディ -->
+        <div>
+          <div id="today">
+            <!-- <div class="border border-black rounded flex items-center justify-between mb-2">
+              <div class="w-1/2">
+                <div class="max-w-[125px] mx-auto">
+                  <img src="./assets/images/weather_sun_cloud.svg" alt="" />
+                </div>
+              </div>
+
+              <div class="w-1/2 py-4 pl-[34px]">
+                <div>
+                  <div class="flex items-start">
+                    <span class="text-[72px] font-light font-roboto leading-none">32</span>
+                    <span class="font-bold text-2xl">°C</span>
+                  </div>
+                  <div class="text-gray1 font-bold text-base">
+                    <div><span class="min-w-[4em] inline-block">最低気温</span> : <span>26°C</span></div>
+                    <div><span class="min-w-[4em] inline-block">天気</span> : <span>晴時々曇</span></div>
+                    <div><span class="min-w-[4em] inline-block">風速</span> : <span>0.8m</span></div>
+                  </div>
+                </div>
+              </div>
+            </div> -->
+          </div>
+
+          <div id="futureDates" class="flex gap-2">
+            <!-- JSでレンダリングする際はこの中身をコメントアウト -->
+            <!-- <div class="pt-3 px-10 pb-4 border border-black rounded w-1/2">
+              <div class="text-center text-[24px] mb-2.5">木</div>
+              <div class="max-w-[90px] min-h-[88px] mx-auto mb-2.5"><img src="./assets/images/weather_sun.svg" alt="" /></div>
+              <div class="flex justify-between">
+                <div class="flex items-start leading-none">
+                  <span class="font-roboto font-bold text-2xl">30</span>
+                  <span class="font-bold text-sm text-gray1">°C</span>
+                </div>
+                <div class="flex items-start leading-none text-gray1">
+                  <span class="font-roboto font-bold text-2xl">22</span>
+                  <span class="font-bold text-sm text-gray1">°C</span>
+                </div>
+              </div>
+            </div>
+            <div class="pt-3 px-10 pb-4 border border-black rounded w-1/2">
+              <div class="text-center text-[24px] mb-2.5">木</div>
+              <div class="max-w-[90px] mx-auto mb-2.5"><img src="./assets/images/weather_rain.svg" alt="" /></div>
+              <div class="flex justify-between">
+                <div class="flex items-start leading-none">
+                  <span class="font-roboto font-bold text-2xl">29</span>
+                  <span class="font-bold text-sm">°C</span>
+                </div>
+                <div class="flex items-start leading-none">
+                  <span class="font-roboto font-bold text-2xl">20</span>
+                  <span class="font-bold text-sm">°C</span>
+                </div>
+              </div>
+            </div> -->
+          </div>
+        </div>
+      </div>
+
+      <!-- サイドバーコンテンツ 2 -->
+      <div>
+        <!-- コンテンツ ヘッド -->
+        <div class="flex items-center justify-between mb-2">
+          <div class="flex items-center ml-1">
+            <span class="text-xl">通知</span>
+            <span class="text-lg bg-accent min-w-[22px] min-h-[22px] rounded-full flex items-center justify-center text-white leading-none ml-1">0</span>
+          </div>
+        </div>
+
+        <!-- コンテンツ ボディ -->
+        <div class="border border-black rounded min-h-[5rem] flex items-center justify-center">
+          <span class="text-base">現在通知はありません</span>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
