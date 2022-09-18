@@ -1,0 +1,62 @@
+body {
+  font-family: "Montserrat", "Noto Sans", sans-serif;
+  color: #3f3f3f;
+}
+
+img {
+  display: block;
+  width: 100%;
+}
+
+.font-noto {
+  font-family: "Noto Sans";
+}
+
+.font-roboto {
+  font-family: "Roboto";
+}
+
+.link-parent.on .link-mark:before {
+  transform: translateY(-50%) rotate(180deg);
+}
+.link-parent.on .link-mark:after {
+  transform: translateX(-50%) rotate(90deg);
+}
+
+.link-mark {
+  position: relative;
+  width: 15px;
+  height: 15px;
+}
+.link-mark:before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  right: 0;
+  transform: translateY(-50%);
+  width: 15px;
+  height: 1px;
+  background-color: #fff;
+  transition: 0.3s;
+}
+.link-mark:after {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 50%;
+  transform: translateX(-50%);
+  width: 1px;
+  height: 15px;
+  background-color: #fff;
+  transition: 0.3s;
+}
+@media screen and (min-width: 640px) {
+  .link-mark:before, .link-mark:after {
+    content: unset;
+  }
+}
+
+.link-children {
+  overflow: hidden;
+  transition: 0.3s;
+}/*# sourceMappingURL=style.css.map */
