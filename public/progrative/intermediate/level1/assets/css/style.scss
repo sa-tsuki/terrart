@@ -1,0 +1,382 @@
+body {
+  font-family: "Montserrat", "Noto Sans", sans-serif;
+  color: #3f3f3f;
+  background: linear-gradient(25deg, rgba(217, 217, 217, 0), rgba(63, 63, 63, 0.22));
+
+  display: grid;
+  grid-template-rows: max-content 1fr max-content;
+  grid-template-columns: 1fr;
+  min-height: 100vh;
+}
+
+img {
+  display: block;
+  width: 100%;
+}
+
+.font-noto {
+  font-family: "Noto Sans";
+}
+
+.font-roboto {
+  font-family: "Roboto";
+}
+
+header {
+  grid-row: 1;
+  position: sticky;
+  left: 0;
+  top: 0;
+  z-index: 10;
+  width: 100%;
+  padding: 20px 20px 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 40px;
+
+  .header {
+    &__left {
+      width: 172px;
+    }
+
+    &__right {
+      display: none;
+      align-items: center;
+      gap: 60px;
+    }
+
+    &__elem {
+      a {
+        font-size: 16px;
+        font-weight: 700;
+      }
+
+      &-signIn {
+        a {
+          padding: 8px 24px;
+          color: #fff;
+          background-color: #3f3f3f;
+          border-radius: 5px;
+        }
+      }
+
+      &-cart {
+        width: 30px;
+        a {
+          position: relative;
+        }
+      }
+    }
+
+    &__cart {
+      &Number {
+        position: absolute;
+        width: 22px;
+        top: -11px;
+        right: -11px;
+      }
+    }
+  }
+}
+
+main {
+  grid-row: 2;
+  max-width: 1308px;
+  padding: 0 30px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+
+  .main {
+    &__container {
+      display: none;
+      justify-content: center;
+      align-items: center;
+    }
+
+    &__left {
+      width: 31.33%;
+
+      &Title {
+        font-weight: 700;
+        font-size: 56px;
+        line-height: 68px;
+
+        span {
+          letter-spacing: -0.13em;
+        }
+      }
+
+      &Desc {
+        margin-top: 28px;
+        display: flex;
+        flex-direction: column;
+        gap: 8px;
+
+        p {
+          font-weight: 400;
+          font-size: 16px;
+          line-height: 24px;
+          letter-spacing: 0.02em;
+
+          span {
+            display: inline-block;
+          }
+        }
+      }
+
+      &Info {
+        margin-top: 34px;
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+
+        p {
+          font-weight: 400;
+          font-size: 14px;
+          line-height: 26px;
+          color: #a4a4a4;
+        }
+      }
+
+      &ToDetail {
+        margin-top: 35px;
+
+        a {
+          display: flex;
+          align-items: center;
+          gap: 32px;
+        }
+
+        &Text {
+          font-weight: 400;
+          font-size: 14px;
+          line-height: 17px;
+        }
+
+        &Arrow {
+          width: 32px;
+        }
+      }
+    }
+
+    &__center {
+      margin-top: 20px;
+      margin-right: 54px;
+      margin-left: 152px;
+      width: 297px;
+    }
+
+    &__right {
+      width: 28.68%;
+
+      &Colors {
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+        gap: 10px;
+      }
+
+      &Color {
+        input {
+          &[type="radio"] {
+            display: none;
+
+            &:checked + label {
+              &:before {
+                opacity: 1;
+              }
+            }
+          }
+        }
+
+        label {
+          width: 80px;
+          aspect-ratio: 1/1;
+          border-radius: 999px;
+          display: block;
+          position: relative;
+
+          &:before {
+            content: "";
+            width: 60px;
+            aspect-ratio: 1/1;
+            border: solid 1px #3f3f3f;
+            border-radius: 999px;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            transition: 0.3s;
+            opacity: 0;
+          }
+        }
+      }
+
+      &Sizes {
+        margin-top: 24px;
+        display: flex;
+        align-items: center;
+        gap: 12px;
+
+        input {
+          &[type="radio"] {
+            display: none;
+
+            &:checked + label {
+              background-color: #3f3f3f;
+              color: #fff;
+              font-weight: 500;
+            }
+          }
+        }
+
+        label {
+          font-family: "Roboto";
+          font-weight: 300;
+          border: 1px solid #3f3f3f;
+          padding: 6px 28px;
+          transition: 0.3s;
+          border-radius: 999px;
+        }
+      }
+
+      &Infos {
+        margin-top: 32px;
+      }
+
+      &Info {
+        display: flex;
+        align-items: center;
+        gap: 31px;
+        margin-top: 16px;
+
+        &:first-child {
+          margin-top: 0;
+        }
+
+        &Title {
+          min-width: 5rem;
+          font-weight: 500;
+          font-size: 16px;
+          line-height: 20px;
+          color: #a4a4a4;
+        }
+
+        &Rates {
+          display: flex;
+          align-items: center;
+          gap: -1px;
+
+          img {
+            width: 24px;
+          }
+        }
+
+        &Content {
+          font-weight: 500;
+          font-size: 16px;
+          line-height: 20px;
+        }
+      }
+
+      &PriceBlock {
+        margin-top: 24px;
+      }
+
+      &Price {
+        font-family: "Hiragino Kaku Gothic Pro";
+        font-weight: 600;
+        font-size: 32px;
+        line-height: 48px;
+      }
+
+      &Unit {
+        font-weight: 600;
+        font-size: 22px;
+        line-height: 26px;
+      }
+
+      &Actions {
+        margin-top: 24px;
+        display: flex;
+        align-items: center;
+        gap: 12px;
+
+        &Submit {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          background-color: #3f3f3f;
+          color: #fff;
+          padding: 10px 32px;
+          border-radius: 999px;
+          font-weight: 400;
+          font-size: 18px;
+          line-height: 22px;
+        }
+
+        &Favorite {
+          width: 42px;
+          aspect-ratio: 1/1;
+          border-radius: 999px;
+          border: 1px solid #3f3f3f;
+          background-color: #fff;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+
+          img {
+            width: 22px;
+          }
+        }
+      }
+    }
+
+    &__SP {
+      display: block;
+      text-align: center;
+    }
+  }
+}
+
+footer {
+  grid-row: 3;
+}
+
+// md ~
+@media screen and (min-width: 768px) {
+  header {
+    padding: 32px 32px 0;
+
+    .header {
+      &__left {
+        width: 281px;
+      }
+
+      &__right {
+        display: flex;
+      }
+    }
+  }
+
+  main {
+    .main {
+      &__container {
+        display: flex;
+      }
+
+      &__SP {
+        display: none;
+      }
+    }
+  }
+}
+
+// lg ~
+@media screen and (min-width: 1024px) {
+  header {
+    padding: 32px 56px 0;
+  }
+}

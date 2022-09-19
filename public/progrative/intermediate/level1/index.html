@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0" />
+    <title>Progrative | Intermesiate | Level 1</title>
+
+    <!-- CSS 読み込み -->
+    <link rel="stylesheet" href="./assets/css/style.css" />
+
+    <!-- google font 読み込み -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&family=Noto+Sans:wght@100;200;300;400;500;600;700;800;900&family=Roboto:wght@100;300;400;500;700;900&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Tailwind 読み込み -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            fontSize: {
+              xs: ".625rem", // 10px
+              sm: ".75rem", // 12px
+              base: "0.875rem", // 14px
+              lg: "1rem", // 16px
+              xl: "1.25rem", // 20px
+              "2xl": "1.5rem", // 24px
+              "3xl": "2.375rem", // 38px
+              "4xl": "2.75rem", // 44px
+              "5xl": "3rem", // 48px
+              "6xl": "3.5rem", // 56px
+            },
+            colors: {
+              black: "#3f3f3f",
+              gray1: "#7e7e7e",
+              gray2: "#e1e1e1",
+              accent: "#2FA597",
+            },
+          },
+        },
+      };
+    </script>
+
+    <!-- JS 読み込み -->
+    <script defer src="./assets/js/index.js"></script>
+  </head>
+  <body>
+    <header class="">
+      <div class="header__left">
+        <img src="./assets/images/header.svg" alt="" />
+      </div>
+      <div class="header__right">
+        <div class="header__elem"><a href="">About</a></div>
+        <div class="header__elem"><a href="">Stockists</a></div>
+        <div class="header__elem"><a href="">Online Shop</a></div>
+        <div class="header__elem header__elem-signIn"><a href="">Sign in</a></div>
+        <div class="header__elem header__elem-cart">
+          <a href="">
+            <img class="header__cartIcon" src="./assets/images/cart.svg" alt="" />
+            <img class="header__cartNumber" src="./assets/images/cart_01.svg" alt="" />
+          </a>
+        </div>
+      </div>
+    </header>
+
+    <main class="">
+      <div class="main__container">
+        <!--  -->
+        <div class="main__left">
+          <div class="main__leftTitle">Life<span>&nbsp;</span>+</div>
+          <div class="main__leftDesc">
+            <p>
+              <span>ステンレスの</span><span>中でも</span><span>最高品質である</span><span>SUS410を</span><span>採用。</span><span>さらに、</span><span>二重構造により</span><span>従来より</span
+              ><span>長く</span><span>保温・保冷が</span><span>可能。</span>
+            </p>
+            <p><span>アウトドアシーンでは</span><span>富士山登頂後も</span><span>保温を</span><span>持続し</span><span>遺憾無く</span><span>パワーを発揮。</span></p>
+          </div>
+          <div class="main__leftInfo">
+            <p>Stainless&nbsp;steel<br />350ml&nbsp;/&nbsp;500ml&nbsp;/&nbsp;1000ml<br />heat&nbsp;/&nbsp;cold&nbsp;insulation&nbsp;36&nbsp;hours</p>
+            <p>ステンレス合金<br />350ml&nbsp;/&nbsp;500ml&nbsp;/&nbsp;1000ml&nbsp;<br />36時間保温保冷効果持続</p>
+          </div>
+          <div class="main__leftToDetail">
+            <a href="">
+              <span class="main__leftToDetailText">詳細を見る</span>
+              <span class="main__leftToDetailArrow"><img src="./assets/images/arrow01.svg" alt="" /></span>
+            </a>
+          </div>
+        </div>
+        <!--  -->
+        <div class="main__center">
+          <img src="./assets/images/black.png" alt="Life + ボトル画像" title="Life + ボトル画像" />
+        </div>
+        <!--  -->
+        <div class="main__right">
+          <form action="">
+            <!-- colors -->
+            <div class="main__rightColors">
+              <div class="main__rightColor">
+                <input type="radio" name="color" id="color_black" checked />
+                <label for="color_black"><img src="./assets/images/color_black.svg" alt="" /></label>
+              </div>
+              <div class="main__rightColor">
+                <input type="radio" name="color" id="color_white" />
+                <label for="color_white"><img src="./assets/images/color_white.svg" alt="" /></label>
+              </div>
+              <div class="main__rightColor">
+                <input type="radio" name="color" id="color_earthGreen" />
+                <label for="color_earthGreen"><img src="./assets/images/color_earthGreen.svg" alt="" /></label>
+              </div>
+            </div>
+
+            <!-- size -->
+            <div class="main__rightSizes">
+              <div class="main__rightSize">
+                <input type="radio" name="size" id="size_350" />
+                <label for="size_350">350ml</label>
+              </div>
+              <div class="main__rightSize">
+                <input type="radio" name="size" id="size_500" checked />
+                <label for="size_500">500ml</label>
+              </div>
+              <div class="main__rightSize">
+                <input type="radio" name="size" id="size_1000" />
+                <label for="size_1000">1000ml</label>
+              </div>
+            </div>
+
+            <!-- info -->
+            <div class="main__rightInfos">
+              <div class="main__rightInfo">
+                <div class="main__rightInfoTitle">評価</div>
+                <div class="main__rightInfoRates">
+                  <img src="./assets/images/star_full.svg" alt="" />
+                  <img src="./assets/images/star_full.svg" alt="" />
+                  <img src="./assets/images/star_full.svg" alt="" />
+                  <img src="./assets/images/star_half.svg" alt="" />
+                  <img src="./assets/images/star_empty.svg" alt="" />
+                </div>
+              </div>
+              <div class="main__rightInfo">
+                <div class="main__rightInfoTitle">配達予定日</div>
+                <div class="main__rightInfoContent">最短翌日お届け</div>
+              </div>
+            </div>
+
+            <!-- price -->
+            <div class="main__rightPriceBlock">
+              <span class="main__rightPrice">4,200</span>
+              <span class="main__rightUnit">円</span>
+            </div>
+
+            <!-- actions -->
+            <div class="main__rightActions">
+              <button class="main__rightActionsSubmit" type="submit">カートに追加</button>
+              <button class="main__rightActionsFavorite" type=""><img src="./assets/images/favorite_on.svg" alt="" /></button>
+            </div>
+          </form>
+        </div>
+      </div>
+
+      <!--  -->
+      <div class="main__SP">
+        このカリキュラムは現在、SPのレスポンシブ対応はしておりません。<br />
+        お手数ですが、PCでご確認ください。
+      </div>
+      <!--  -->
+    </main>
+
+    <footer class="bg-black text-white py-1">
+      <div class="flex justify-center items-center text-sm text-gray1 font-noto font-bold">© Progrative by <span class="font-roboto ml-1"> TERRART 2022</span>.</div>
+    </footer>
+  </body>
+</html>
