@@ -1,11 +1,7 @@
 body {
-  font-family: 'Montserrat', 'Noto Sans', sans-serif;
+  font-family: "Montserrat", "Noto Sans", sans-serif;
   color: #3f3f3f;
-  background: linear-gradient(
-    25deg,
-    rgba(217, 217, 217, 0),
-    rgba(63, 63, 63, 0.22)
-  );
+  background: linear-gradient(25deg, rgba(217, 217, 217, 0), rgba(63, 63, 63, 0.22));
   display: grid;
   grid-template-rows: -webkit-max-content 1fr -webkit-max-content;
   grid-template-rows: max-content 1fr max-content;
@@ -19,11 +15,11 @@ img {
 }
 
 .font-noto {
-  font-family: 'Noto Sans';
+  font-family: "Noto Sans";
 }
 
 .font-roboto {
-  font-family: 'Roboto';
+  font-family: "Roboto";
 }
 
 @-webkit-keyframes bound-anim {
@@ -80,6 +76,7 @@ header {
   align-items: center;
   justify-content: space-between;
   gap: 40px;
+  transition: padding 0.4s;
 }
 header .header__left {
   width: 172px;
@@ -95,7 +92,7 @@ header .header__elem a {
   position: relative;
 }
 header .header__elem a:before {
-  content: '';
+  content: "";
   position: absolute;
   bottom: -3px;
   left: 0;
@@ -134,7 +131,7 @@ header .header__elem-cart a:before {
 }
 header .header__elem-cart a:hover .header__cartNumber {
   -webkit-animation: bound-anim 0.8s infinite;
-  animation: bound-anim 0.8s infinite;
+          animation: bound-anim 0.8s infinite;
 }
 header .header__cartNumber {
   position: absolute;
@@ -220,7 +217,7 @@ main .main__center {
   margin-top: 20px;
   margin-right: 54px;
   margin-left: 152px;
-  width: 297px;
+  width: 293px;
 }
 main .main__right {
   width: 28.68%;
@@ -231,10 +228,10 @@ main .main__rightColors {
   justify-content: flex-start;
   gap: 10px;
 }
-main .main__rightColor input[type='radio'] {
+main .main__rightColor input[type=radio] {
   display: none;
 }
-main .main__rightColor input[type='radio']:checked + label:before {
+main .main__rightColor input[type=radio]:checked + label:before {
   opacity: 1;
 }
 main .main__rightColor label {
@@ -245,7 +242,7 @@ main .main__rightColor label {
   position: relative;
 }
 main .main__rightColor label:before {
-  content: '';
+  content: "";
   width: 60px;
   aspect-ratio: 1/1;
   border: solid 1px #3f3f3f;
@@ -268,16 +265,16 @@ main .main__rightSizes {
   align-items: center;
   gap: 12px;
 }
-main .main__rightSizes input[type='radio'] {
+main .main__rightSizes input[type=radio] {
   display: none;
 }
-main .main__rightSizes input[type='radio']:checked + label {
+main .main__rightSizes input[type=radio]:checked + label {
   background-color: #3f3f3f;
   color: #fff;
   font-weight: 500;
 }
 main .main__rightSizes label {
-  font-family: 'Roboto';
+  font-family: "Roboto";
   font-weight: 300;
   border: 1px solid #3f3f3f;
   padding: 6px 28px;
@@ -325,7 +322,7 @@ main .main__rightPriceBlock {
   margin-top: 24px;
 }
 main .main__rightPrice {
-  font-family: 'Hiragino Kaku Gothic Pro';
+  font-family: "Hiragino Kaku Gothic Pro";
   font-weight: 600;
   font-size: 32px;
   line-height: 48px;
@@ -398,6 +395,11 @@ footer {
 }
 @media screen and (min-width: 1024px) {
   header {
-    padding: 32px 56px 0;
+    padding: 55.8px 30px 0;
   }
-} /*# sourceMappingURL=style.css.map */
+}
+@media screen and (min-width: 1440px) {
+  header {
+    padding: 55.8px 80px 0;
+  }
+}/*# sourceMappingURL=style.css.map */
