@@ -1,0 +1,164 @@
+body {
+  font-family: "Montserrat", "Noto Sans", sans-serif;
+  color: #3f3f3f;
+  display: grid;
+  grid-template-rows: -webkit-max-content 1fr -webkit-max-content;
+  grid-template-rows: max-content 1fr max-content;
+  grid-template-columns: 1fr;
+  min-height: 100vh;
+}
+
+img {
+  display: block;
+  width: 100%;
+}
+
+.font-noto {
+  font-family: "Noto Sans";
+}
+
+.font-roboto {
+  font-family: "Roboto";
+}
+
+header {
+  grid-row: 1;
+  position: -webkit-sticky;
+  position: sticky;
+  left: 0;
+  top: 0;
+  z-index: 10;
+  width: 100%;
+  padding: 20px 20px 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 40px;
+  transition: padding 0.4s;
+}
+header .header__left {
+  width: 172px;
+}
+
+main {
+  grid-row: 2;
+  width: 100%;
+  max-width: 1260px;
+  padding: 0 30px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+}
+main h1 {
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 38px;
+  line-height: 45px;
+}
+main .main__container {
+  display: none;
+  justify-content: center;
+  align-items: center;
+}
+main .main__lists {
+  display: flex;
+  justify-content: center;
+  gap: 80px;
+  margin-top: 28px;
+}
+main .main__list {
+  min-width: 560px;
+}
+main .main__list .main__listDesc {
+  display: none;
+}
+main .main__list.on .main__listDesc {
+  display: block;
+}
+main .main__list.on .main__triangle {
+  transform: rotate(180deg);
+}
+main .main__listHeader {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 3.67px 20px 6px;
+  margin-top: 32px;
+  border-bottom: 3px solid #3f3f3f;
+}
+main .main__listHeaderBlock {
+  display: flex;
+  align-items: center;
+}
+main .main__number {
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 19px;
+  display: block;
+  margin-right: 9px;
+}
+main .main__text {
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 21px;
+  display: block;
+}
+main .main__listDesc {
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 22px;
+  padding: 24px 17px 24px 39px;
+  border-bottom: 3px solid #3f3f3f;
+}
+main .main__catch {
+  text-align: center;
+  font-family: "Roobto";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 28px;
+  margin-top: 80px;
+}
+main .main__SP {
+  display: block;
+  text-align: center;
+}
+
+footer {
+  grid-row: 3;
+}
+
+@media screen and (min-width: 768px) {
+  header {
+    padding: 32px 32px 0;
+  }
+  header .header__left {
+    width: 281px;
+  }
+  header .header__right {
+    display: flex;
+  }
+  main .main__container {
+    display: block;
+  }
+  main .main__SP {
+    display: none;
+  }
+}
+@media screen and (min-width: 1024px) {
+  header {
+    padding: 55.8px 30px 0;
+  }
+}
+@media screen and (min-width: 1440px) {
+  header {
+    padding: 55.8px 80px 0;
+  }
+}/*# sourceMappingURL=style.css.map */
