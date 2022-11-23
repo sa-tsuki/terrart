@@ -18,47 +18,6 @@
     />
     <!-- Tailwind 読み込み -->
     <script src="https://cdn.tailwindcss.com"></script>
-    <script>
-      tailwind.config = {
-        theme: {
-          extend: {
-            fontSize: {
-              xs: '.625rem', // 10px
-              sm: '.75rem', // 12px
-              base: '0.875rem', // 14px
-              lg: '1rem', // 16px
-              xl: '1.25rem', // 20px
-              '2xl': '1.5rem', // 24px
-              '3xl': '2.375rem', // 38px
-              '4xl': '2.75rem', // 44px
-              '5xl': '3rem', // 48px
-              '6xl': '3.5rem', // 56px
-            },
-            colors: {
-              black: '#3f3f3f',
-              black2: '#4d4d4d',
-              gray1: '#7e7e7e',
-              gray2: '#e1e1e1',
-              gray3: '#f8f8f8',
-              gray4: '#d9d9d9',
-              gray5: '#DBDBDB',
-              accent: '#2FA597',
-            },
-            screens: {
-              '2xl': '1440px',
-            },
-          },
-        },
-      }
-    </script>
-
-    <style type="text/tailwindcss">
-      @layer utilities {
-        .btn-links {
-          @apply relative after:absolute after:content-[''] after:w-[4px] after:h-[4px] after:rounded-full after:bg-white after:top-1/2 after:-left-4 after:-translate-y-1/2 after:duration-300 after:opacity-0 hover:after:opacity-100;
-        }
-      }
-    </style>
 
     <!-- JS 読み込み -->
     <script defer src="./assets/js/index.js"></script>
@@ -66,33 +25,22 @@
     <!-- CSS 読み込み -->
     <link rel="stylesheet" href="./assets/css/style.css" />
   </head>
-  <body class="bg-gray3">
-    <header
-      class="sticky w-full left-0 top-0 z-10 px-[20px] md:px-8 lg:px-14 pt-[20px] md:pt-[32px]"
-    >
-      <div class="text-3xl font-bold w-[172px] md:w-[281px]">
+  <body>
+    <header>
+      <div class="header__container">
         <img src="./assets/images/header.svg" alt="" />
       </div>
     </header>
 
     <main class="">
       <!-- VISUAL -->
-      <div
-        id="visual"
-        class="px-0 md:px-[21px] lg:px-14 pt-[75px] mb-[64px] md:mb-0 overflow-x-hidden max-w-[1440px] mx-auto"
-      >
-        <div class="relative">
+      <div id="visual" class="visual">
+        <div class="visual__container">
           <!-- 背景画像 -->
-          <img
-            class="min-w-[822px]"
-            src="./assets/images/main-background.png"
-            alt=""
-          />
-          <div
-            class="absolute z-10 bottom-0 md:top-1/2 left-1/2 md:left-0 -translate-x-1/2 md:translate-x-0 flex flex-col-reverse md:flex-row justify-between items-center md:items-stretch max-w-[338px] md:max-w-none w-full md:-translate-y-1/2 px-[25px] pb-[32px] md:pb-0 md:px-[40px] gap-[30px] md:gap-none"
-          >
+          <img src="./assets/images/main-background.png" alt="" />
+          <div class="visual__contents">
             <!-- 左の要素 -->
-            <div class="w-full md:w-[44.96%] relative text-center">
+            <div class="visual__texts">
               <div>
                 <img
                   class=""
@@ -101,241 +49,160 @@
                 />
               </div>
 
-              <div
-                class="mt-[28px] md:mt-8 flex items-center justify-end text-white"
-              >
-                <div class="flex gap-8 items-center">
-                  <div class="w-16 h-px bg-white"></div>
-                  <div class="text-base font-bold">Progrative</div>
+              <div class="visual__from">
+                <div class="visual__fromBlock">
+                  <div class="visual__fromLine"></div>
+                  <div class="visual__fromText">Progrative</div>
                 </div>
               </div>
 
-              <button
-                class="text-black2 bg-white font-bold font-noto px-[42px] py-[12px] inline-flex justify-center items-center rounded-full relative md:absolute bottom-0 left-0 mt-[32px] md:mt-0"
-              >
-                無料で始める
-              </button>
+              <button class="visual__button">無料で始める</button>
             </div>
 
             <!-- 右の要素 -->
-            <div class="w-full md:w-[49.68%]">
+            <div class="visual__image">
               <img src="./assets/images/mockup.png" alt="" />
             </div>
           </div>
         </div>
 
-        <div
-          class="w-px h-[150px] bg-gradient-to-b from-white to-black ml-auto mt-[40px] mb-[44px] hidden md:block"
-        ></div>
+        <div class="visual__scroll"></div>
       </div>
       <!-- PLANS -->
-      <div id="plans" class="px-[21px] lg:px-14 pb-[64px] lg:pb-[120px]">
-        <div
-          class="font-bold text-[24px] md:text-[32px] lg:text-[42px] text-center mb-8"
-        >
-          プラン
-        </div>
-        <div
-          class="flex justify-center items-stretch gap-[131px] lg:gap-8 flex-col lg:flex-row text-white pt-[67px] max-w-[1174px] mx-auto"
-        >
+      <div id="plans" class="plans">
+        <div class="plans__headding">プラン</div>
+        <div class="plans__container">
           <!--  -->
-          <div
-            class="w-full lg:w-1/3 max-w-none md:max-w-[480px] lg:max-w-[348px] mx-auto pt-[175px] px-[45px] pb-[114px] lg:pb-[162px] rounded-sm bg-black2 relative flex flex-col items-center relative"
-          >
-            <div
-              class="absolute -top-[67px] left-1/2 -translate-x-1/2 w-[60.34%] max-w-[210px]"
-            >
+          <div class="plans__plan">
+            <div class="plans__planImage">
               <img src="./assets/images/plan01.png" alt="plan1" />
             </div>
-            <div class="text-[32px] font-bold">Basic</div>
-            <div class="inline-flex flex-col gap-[12px] mt-8">
-              <div class="text-lg font-normal">- 3人まで管理画面利用可能</div>
-              <div class="text-lg font-normal">- 1サイトまで解析可能</div>
-              <div class="text-lg font-normal">- リーチ回数測定</div>
-              <div class="text-lg font-normal">- エンゲージメント率測定</div>
-              <div class="text-lg font-normal">- インプレッション数測定</div>
-              <div class="text-lg font-normal">- サイト遷移計測</div>
+            <div class="plans__title">Basic</div>
+            <div class="plans__contents">
+              <div class="plans__content">
+                <div class="plans__element">- 3人まで管理画面利用可能</div>
+                <div class="plans__element">- 1サイトまで解析可能</div>
+                <div class="plans__element">- リーチ回数測定</div>
+                <div class="plans__element">- エンゲージメント率測定</div>
+                <div class="plans__element">- インプレッション数測定</div>
+                <div class="plans__element">- サイト遷移計測</div>
+              </div>
             </div>
-            <button
-              class="rounded-full w-[74.13%] max-w-[258px] bg-white text-black2 py-[14px] font-bold font-noto absolute left-1/2 bottom-8 -translate-x-1/2"
-            >
-              無料ではじめる
-            </button>
+            <button class="plans__button">無料ではじめる</button>
           </div>
           <!--  -->
-          <div
-            class="w-full lg:w-1/3 max-w-none md:max-w-[480px] lg:max-w-[348px] mx-auto pt-[175px] px-[45px] pb-[114px] lg:pb-[162px] rounded-sm bg-black2 relative flex flex-col items-center relative"
-          >
-            <div
-              class="absolute -top-[67px] left-1/2 -translate-x-1/2 w-[60.34%] max-w-[210px]"
-            >
+          <div class="plans__plan">
+            <div class="plans__planImage">
               <img src="./assets/images/plan02.png" alt="plan1" />
             </div>
-            <div class="text-[32px] font-bold">Business</div>
-            <div class="inline-flex flex-col gap-[12px] mt-8 mb-[24px]">
-              <div class="text-lg font-normal">- 20人まで管理画面利用可能</div>
-              <div class="text-lg font-normal">- 5サイトまで解析可能</div>
+            <div class="plans__title">Business</div>
+            <div class="plans__contents">
+              <div class="plans__content">
+                <div class="plans__element">- 20人まで管理画面利用可能</div>
+                <div class="plans__element">- 5サイトまで解析可能</div>
+              </div>
+              <div class="plans__content">
+                <div class="plans__element">Basicプランの内容に加え</div>
+                <div class="plans__element">- 各測定のタイマー機能</div>
+                <div class="plans__element">- アラート機能</div>
+                <div class="plans__element">- エクスポート機能</div>
+                <div class="plans__element">- 測定ログを無制限に記録</div>
+              </div>
             </div>
-            <div class="inline-flex flex-col gap-[12px]">
-              <div class="text-lg font-normal">Basicプランの内容に加え</div>
-              <div class="text-lg font-normal">- 各測定のタイマー機能</div>
-              <div class="text-lg font-normal">- アラート機能</div>
-              <div class="text-lg font-normal">- エクスポート機能</div>
-              <div class="text-lg font-normal">- 測定ログを無制限に記録</div>
-            </div>
-            <button
-              class="rounded-full w-[74.13%] max-w-[258px] bg-white text-black2 py-[14px] font-bold font-noto absolute left-1/2 bottom-8 -translate-x-1/2"
-            >
-              問い合わせる
-            </button>
+            <button class="plans__button">問い合わせる</button>
           </div>
           <!--  -->
-          <div
-            class="w-full lg:w-1/3 max-w-none md:max-w-[480px] lg:max-w-[348px] mx-auto pt-[175px] px-[45px] pb-[114px] lg:pb-[162px] rounded-sm bg-black2 relative flex flex-col items-center relative"
-          >
-            <div
-              class="absolute -top-[67px] left-1/2 -translate-x-1/2 w-[60.34%] max-w-[210px]"
-            >
+          <div class="plans__plan">
+            <div class="plans__planImage">
               <img src="./assets/images/plan03.png" alt="plan1" />
             </div>
-            <div class="text-[32px] font-bold">Expert</div>
-            <div class="inline-flex flex-col gap-[12px] mt-8 mb-[24px]">
-              <div class="text-lg font-normal">- 100人まで管理画面利用可能</div>
-              <div class="text-lg font-normal">- 無制限にサイト解析可能</div>
+            <div class="plans__title">Expert</div>
+            <div class="plans__contents">
+              <div class="plans__content">
+                <div class="plans__element">- 100人まで管理画面利用可能</div>
+                <div class="plans__element">- 無制限にサイト解析可能</div>
+              </div>
+              <div class="plans__content">
+                <div class="plans__element">Businessプランの内容に加え</div>
+                <div class="plans__element">- Twitter連携 & 分析</div>
+                <div class="plans__element">- Instagram連携 & 分析</div>
+                <div class="plans__element">- YouTube連携 & 分析</div>
+                <div class="plans__element">※TikTokは今後対応予定</div>
+              </div>
             </div>
-            <div class="inline-flex flex-col gap-[12px]">
-              <div class="text-lg font-normal">Businessプランの内容に加え</div>
-              <div class="text-lg font-normal">- Twitter連携 & 分析</div>
-              <div class="text-lg font-normal">- Instagram連携 & 分析</div>
-              <div class="text-lg font-normal">- YouTube連携 & 分析</div>
-              <div class="text-lg font-normal">※TikTokは今後対応予定</div>
-            </div>
-            <button
-              class="rounded-full w-[74.13%] max-w-[258px] bg-white text-black2 py-[14px] font-bold font-noto absolute left-1/2 bottom-8 -translate-x-1/2"
-            >
-              問い合わせる
-            </button>
+            <button class="plans__button">問い合わせる</button>
           </div>
         </div>
       </div>
       <!-- NEWS -->
-      <div
-        id="news"
-        class="px-[21px] lg:px-14 md:py-[120px] bg-white pt-[30px] pb-[98px]"
-      >
-        <div class="flex flex-col md:flex-row max-w-[1174px] mx-auto">
-          <div
-            class="font-bold text-[24px] md:text-[32px] lg:text-[42px] w-full md:w-[18%] lg:w-[23.54%] text-center md:text-left"
-          >
-            お知らせ
-          </div>
-          <div class="w-full md:w-[76.46%] flex flex-col mt-[10.5px]">
+      <div id="news" class="news">
+        <div class="news__container">
+          <div class="news__hedding">お知らせ</div>
+          <div class="news__lists">
             <!--  -->
-            <div
-              class="border-b border-solid border-gray4 flex flex-col md:flex-row items-start md:items-center font-noto gap-none md:gap-[40px] pt-[16px] md:pt-none"
-            >
-              <div class="flex items-center gap-[20px]">
-                <div class="text-base">2025/04/01</div>
-                <div
-                  class="font-bold text-sm py-1 px-2 bg-black2 rounded-full text-white whitespace-nowrap"
-                >
-                  お知らせ
-                </div>
+            <div class="news__list">
+              <div class="news__listData">
+                <div class="news__date">2025/04/01</div>
+                <div class="news__category">お知らせ</div>
               </div>
-              <div class="text-lg w-full">
-                <a
-                  class="w-full block group flex items-center justify-between pt-[12px] pb-[16px] md:py-[18px]"
-                  href=""
+              <div class="news__contentBlock">
+                <a class="news__contentLink" href=""
                   >サイト解析オンライン座談会を開催しました。<span
-                    class="opacity-0 duration-300 group-hover:opacity-100 w-[16px] block"
+                    class="news__linkIcon"
                     ><img src="./assets/images/arrow01.svg" alt="" /></span
                 ></a>
               </div>
             </div>
             <!--  -->
-            <div
-              class="border-b border-solid border-gray4 flex flex-col md:flex-row items-start md:items-center font-noto gap-none md:gap-[40px] pt-[16px] md:pt-none"
-            >
-              <div class="flex items-center gap-[20px]">
-                <div class="text-base">2024/03/28</div>
-                <div
-                  class="font-bold text-sm py-1 px-2 bg-black2 rounded-full text-white whitespace-nowrap"
-                >
-                  ブログ
-                </div>
+            <div class="news__list">
+              <div class="news__listData">
+                <div class="news__date">2024/03/28</div>
+                <div class="news__category">ブログ</div>
               </div>
-              <div class="text-lg w-full">
-                <a
-                  class="w-full block group flex items-center justify-between pt-[12px] pb-[16px] md:py-[18px]"
-                  href=""
+              <div class="news__contentBlock">
+                <a class="news__contentLink" href=""
                   >サイト解析において85%の人が勘違いしている戦略・戦術<span
-                    class="opacity-0 duration-300 group-hover:opacity-100 w-[16px] block"
+                    class="news__linkIcon"
                     ><img src="./assets/images/arrow01.svg" alt="" /></span
                 ></a>
               </div>
             </div>
             <!--  -->
-            <div
-              class="border-b border-solid border-gray4 flex flex-col md:flex-row items-start md:items-center font-noto gap-none md:gap-[40px] pt-[16px] md:pt-none"
-            >
-              <div class="flex items-center gap-[20px]">
-                <div class="text-base">2024/03/16</div>
-                <div
-                  class="font-bold text-sm py-1 px-2 bg-black2 rounded-full text-white whitespace-nowrap"
-                >
-                  ブログ
-                </div>
+            <div class="news__list">
+              <div class="news__listData">
+                <div class="news__date">2024/03/16</div>
+                <div class="news__category">ブログ</div>
               </div>
-              <div class="text-lg w-full">
-                <a
-                  class="w-full block group flex items-center justify-between pt-[12px] pb-[16px] md:py-[18px]"
-                  href=""
+              <div class="news__contentBlock">
+                <a class="news__contentLink" href=""
                   >【Google元社員が語る】各SNSでのエンゲージメント傾向の違い<span
-                    class="opacity-0 duration-300 group-hover:opacity-100 w-[16px] block"
+                    class="news__linkIcon"
                     ><img src="./assets/images/arrow01.svg" alt="" /></span
                 ></a>
               </div>
             </div>
             <!--  -->
-            <div
-              class="border-b border-solid border-gray4 flex flex-col md:flex-row items-start md:items-center font-noto gap-none md:gap-[40px] pt-[16px] md:pt-none"
-            >
-              <div class="flex items-center gap-[20px]">
-                <div class="text-base">2024/03/16</div>
-                <div
-                  class="font-bold text-sm py-1 px-2 bg-black2 rounded-full text-white whitespace-nowrap"
-                >
-                  お知らせ
-                </div>
+            <div class="news__list">
+              <div class="news__listData">
+                <div class="news__date">2024/03/16</div>
+                <div class="news__category">お知らせ</div>
               </div>
-              <div class="text-lg w-full">
-                <a
-                  class="w-full block group flex items-center justify-between pt-[12px] pb-[16px] md:py-[18px]"
-                  href=""
-                  >導入企業さまが500社を突破<span
-                    class="opacity-0 duration-300 group-hover:opacity-100 w-[16px] block"
+              <div class="news__contentBlock">
+                <a class="news__contentLink" href=""
+                  >導入企業さまが500社を突破<span class="news__linkIcon"
                     ><img src="./assets/images/arrow01.svg" alt="" /></span
                 ></a>
               </div>
             </div>
             <!--  -->
-            <div
-              class="border-b border-solid border-gray4 flex flex-col md:flex-row items-start md:items-center font-noto gap-none md:gap-[40px] pt-[16px] md:pt-none"
-            >
-              <div class="flex items-center gap-[20px]">
-                <div class="text-base">2024/02/10</div>
-                <div
-                  class="font-bold text-sm py-1 px-2 bg-black2 rounded-full text-white whitespace-nowrap"
-                >
-                  お知らせ
-                </div>
+            <div class="news__list">
+              <div class="news__listData">
+                <div class="news__date">2024/02/10</div>
+                <div class="news__category">お知らせ</div>
               </div>
-              <div class="text-lg w-full">
-                <a
-                  class="w-full block group flex items-center justify-between pt-[12px] pb-[16px] md:py-[18px]"
-                  href=""
-                  >弊社サイト解析士を15名体制に改変<span
-                    class="opacity-0 duration-300 group-hover:opacity-100 w-[16px] block"
+              <div class="news__contentBlock">
+                <a class="news__contentLink" href=""
+                  >弊社サイト解析士を15名体制に改変<span class="news__linkIcon"
                     ><img src="./assets/images/arrow01.svg" alt="" /></span
                 ></a>
               </div>
@@ -344,225 +211,169 @@
         </div>
       </div>
       <!-- LINKS -->
-      <div
-        id="links"
-        class="bg-black2 px-[21px] lg:px-14 pt-[64px] pb-[12px] md:pb-0 lg:pt-[60px]"
-      >
-        <div
-          class="max-w-[1174px] mx-auto flex text-white font-bold gap-y-[0px] md:gap-y-[32px] gap-x-[16px] lg:gap-[64px] justify-start lg:justify-center pb-[23.5px] flex-wrap"
-        >
+      <div id="links" class="links">
+        <div class="links__container">
           <!--  -->
-          <div
-            class="flex flex-col gap-[26.5px] w-full sm:w-[calc(33%-16px)] lg:w-fit"
-          >
+          <div class="links__block">
             <div class="">
-              <a
-                class="link-parent on font-bold w-full md:w-fit text-[18px] btn-links flex justify-between items-center"
-                href=""
-              >
+              <a class="js-accordionParent on links__parent hover-dot" href="">
                 <span>Progrativeとは</span>
                 <span class="link-mark"></span>
               </a>
             </div>
-            <div class="link-children flex flex-col gap-[20px]">
+            <div class="js-accordionChildren links__children">
               <div>
-                <a href="" class="text-base text-gray4 btn-links">導入事例</a>
+                <a href="" class="links__child hover-dot">導入事例</a>
               </div>
               <div>
-                <a href="" class="text-base text-gray4 btn-links">導入方法</a>
+                <a href="" class="links__child hover-dot">導入方法</a>
               </div>
               <div>
-                <a href="" class="text-base text-gray4 btn-links">活用事例</a>
+                <a href="" class="links__child hover-dot">活用事例</a>
               </div>
               <div>
-                <a href="" class="text-base text-gray4 btn-links"
+                <a href="" class="links__child hover-dot"
                   >Google Analyticsとの違い</a
                 >
               </div>
             </div>
           </div>
           <!--  -->
-          <div
-            class="flex flex-col gap-[26.5px] w-full sm:w-[calc(33%-16px)] lg:w-fit"
-          >
+          <div class="links__block">
             <div class="">
-              <a
-                class="link-parent on font-bold w-full md:w-fit text-[18px] btn-links flex justify-between items-center"
-                href=""
-              >
+              <a class="js-accordionParent links__parent hover-dot" href="">
                 <span>機能</span>
                 <span class="link-mark"></span>
               </a>
             </div>
-            <div class="link-children flex flex-col gap-[20px]">
+            <div class="js-accordionChildren links__children">
               <div>
-                <a href="" class="text-base text-gray4 btn-links"
-                  >リーチ回数計測</a
-                >
+                <a href="" class="links__child hover-dot">リーチ回数計測</a>
               </div>
               <div>
-                <a href="" class="text-base text-gray4 btn-links"
+                <a href="" class="links__child hover-dot"
                   >エンゲージメント率測定</a
                 >
               </div>
               <div>
-                <a href="" class="text-base text-gray4 btn-links"
+                <a href="" class="links__child hover-dot"
                   >インプレッション率測定</a
                 >
               </div>
               <div>
-                <a href="" class="text-base text-gray4 btn-links"
-                  >サイト遷移計測</a
-                >
+                <a href="" class="links__child hover-dot">サイト遷移計測</a>
               </div>
               <div>
-                <a href="" class="text-base text-gray4 btn-links"
-                  >タイマー機能</a
-                >
+                <a href="" class="links__child hover-dot">タイマー機能</a>
               </div>
               <div>
-                <a href="" class="text-base text-gray4 btn-links"
-                  >アラート機能</a
-                >
+                <a href="" class="links__child hover-dot">アラート機能</a>
               </div>
               <div>
-                <a href="" class="text-base text-gray4 btn-links"
-                  >エクスポート機能</a
-                >
+                <a href="" class="links__child hover-dot">エクスポート機能</a>
               </div>
             </div>
           </div>
           <!--  -->
-          <div
-            class="flex flex-col gap-[26.5px] w-full sm:w-[calc(33%-16px)] lg:w-fit"
-          >
+          <div class="links__block">
             <div class="">
-              <a
-                class="link-parent on font-bold w-full md:w-fit text-[18px] btn-links flex justify-between items-center"
-                href=""
-              >
+              <a class="js-accordionParent links__parent hover-dot" href="">
                 <span>サポート</span>
                 <span class="link-mark"></span>
               </a>
             </div>
-            <div class="link-children flex flex-col gap-[20px]">
+            <div class="js-accordionChildren links__children">
               <div>
-                <a href="" class="text-base text-gray4 btn-links"
-                  >よくある質問</a
-                >
+                <a href="" class="links__child hover-dot">よくある質問</a>
               </div>
               <div>
-                <a href="" class="text-base text-gray4 btn-links">ブログ</a>
+                <a href="" class="links__child hover-dot">ブログ</a>
               </div>
               <div>
-                <a href="" class="text-base text-gray4 btn-links"
-                  >ドキュメント</a
-                >
+                <a href="" class="links__child hover-dot">ドキュメント</a>
               </div>
               <div>
-                <a href="" class="text-base text-gray4 btn-links">動画講座</a>
+                <a href="" class="links__child hover-dot">動画講座</a>
               </div>
               <div>
-                <a href="" class="text-base text-gray4 btn-links">資料請求</a>
+                <a href="" class="links__child hover-dot">資料請求</a>
               </div>
               <div>
-                <a href="" class="text-base text-gray4 btn-links">お問合せ</a>
+                <a href="" class="links__child hover-dot">お問合せ</a>
               </div>
             </div>
           </div>
           <!--  -->
-          <div
-            class="flex flex-col gap-[26.5px] w-full sm:w-[calc(33%-16px)] lg:w-fit"
-          >
+          <div class="links__block">
             <div class="">
-              <a
-                class="link-parent on font-bold w-full md:w-fit text-[18px] btn-links flex justify-between items-center"
-                href=""
-              >
+              <a class="js-accordionParent links__parent hover-dot" href="">
                 <span>パートナーについて</span>
                 <span class="link-mark"></span>
               </a>
             </div>
-            <div class="link-children flex flex-col gap-[20px]">
+            <div class="js-accordionChildren links__children">
               <div>
-                <a href="" class="text-base text-gray4 btn-links"
-                  >パートナーとは</a
-                >
+                <a href="" class="links__child hover-dot">パートナーとは</a>
               </div>
               <div>
-                <a href="" class="text-base text-gray4 btn-links"
-                  >パートナー紹介</a
-                >
+                <a href="" class="links__child hover-dot">パートナー紹介</a>
               </div>
               <div>
-                <a href="" class="text-base text-gray4 btn-links"
-                  >よくある質問</a
-                >
+                <a href="" class="links__child hover-dot">よくある質問</a>
               </div>
               <div>
-                <a href="" class="text-base text-gray4 btn-links">資料請求</a>
+                <a href="" class="links__child hover-dot">資料請求</a>
               </div>
               <div>
-                <a href="" class="text-base text-gray4 btn-links">お問い合せ</a>
+                <a href="" class="links__child hover-dot">お問い合せ</a>
               </div>
             </div>
           </div>
           <!--  -->
-          <div
-            class="flex flex-col gap-[26.5px] w-full sm:w-[calc(33%-16px)] lg:w-fit"
-          >
+          <div class="links__block">
             <div class="">
-              <a
-                class="link-parent on font-bold w-full md:w-fit text-[18px] btn-links flex justify-between items-center"
-                href=""
-              >
+              <a class="js-accordionParent links__parent hover-dot" href="">
                 <span>SNS</span>
                 <span class="link-mark"></span>
               </a>
             </div>
-            <div class="link-children flex flex-col gap-[20px]">
+            <div class="js-accordionChildren links__children">
               <div>
-                <a href="" class="text-base text-gray4 btn-links">Twitter</a>
+                <a href="" class="links__child hover-dot">Twitter</a>
               </div>
               <div>
-                <a href="" class="text-base text-gray4 btn-links">YouTube</a>
+                <a href="" class="links__child hover-dot">YouTube</a>
               </div>
               <div>
-                <a href="" class="text-base text-gray4 btn-links">TikTok</a>
+                <a href="" class="links__child hover-dot">TikTok</a>
               </div>
               <div>
-                <a href="" class="text-base text-gray4 btn-links">Instagram</a>
+                <a href="" class="links__child hover-dot">Instagram</a>
               </div>
               <div>
-                <a href="" class="text-base text-gray4 btn-links">Facebook</a>
+                <a href="" class="links__child hover-dot">Facebook</a>
               </div>
             </div>
           </div>
         </div>
-        <hr class="bg-gray4" />
-        <div
-          class="flex items-center justify-between text-gray4 text-base pb-0 pt-[32px] md:py-[32px] flex-wrap gap-[141px] md:gap-[12px] flex-col md:flex-row"
-        >
-          <div
-            class="flex items-start md:items-center gap-[12px] md:gap-[40px] flex-col md:flex-row w-full md:w-fit"
-          >
+        <hr class="links__hr" />
+        <div class="links__about">
+          <div class="links__aboutContainer">
             <a href="">株式会社〇〇</a>
             <a href="">利用規約</a>
             <a href="">特定商取引法に基づく表記</a>
             <a href="">プライバシーポリシー</a>
           </div>
-          <div class="w-full md:w-fit text-right">
-            <a href="" class="text-sm">©️〇〇 All Rights Reserved.</a>
+          <div class="links__copyright">
+            <a href="" class="">©️〇〇 All Rights Reserved.</a>
           </div>
         </div>
       </div>
     </main>
 
-    <footer class="bg-black text-white py-1">
-      <div
-        class="flex justify-center items-center text-sm text-gray1 font-noto font-bold"
-      >
-        © Progrative by <span class="font-roboto ml-1"> TERRART 2022</span>.
+    <footer>
+      <div>
+        © Progrative by&nbsp;<span class="font-roboto"> TERRART 2022</span>.
       </div>
     </footer>
 
