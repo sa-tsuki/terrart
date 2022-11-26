@@ -24,12 +24,12 @@ img {
 
 header {
   width: 100%;
-  position: sticky;
+  position: fixed;
   left: 0;
   top: 0;
   z-index: 9;
   padding: 57.8px 80px 0;
-  grid-area: 'header';
+  grid-area: header;
 
   .header {
     &__container {
@@ -41,7 +41,7 @@ header {
 footer {
   background-color: #3f3f3f;
   padding: 4px;
-  grid-area: 'footer';
+  grid-area: footer;
   position: fixed;
   bottom: 0;
   left: 0;
@@ -65,11 +65,11 @@ main {
   grid-template-columns: max-content 1fr;
   align-items: flex-start;
   gap: 48px;
-  margin-top: 80px;
+  margin-top: calc(80px + 94.18px);
 
   .sidebar {
-    grid-area: 'sidebar';
-    position: sticky;
+    grid-area: sidebar;
+    position: fixed;
     top: 174px;
     left: 0;
     padding-left: 80px;
@@ -122,6 +122,7 @@ main {
   .contents {
     grid-area: contents;
     position: relative;
+    margin-left: 29.62%;
 
     .content {
       position: absolute;
@@ -330,6 +331,7 @@ main {
 
     .contents {
       width: calc(80vw);
+      margin-left: 18%;
       .activities {
         &__contentBlock {
           min-width: unset;
@@ -372,6 +374,7 @@ main {
     .contents {
       width: 90vw;
       margin-top: 240px;
+      margin-left: 0;
 
       .content {
         &.active {

@@ -22,13 +22,12 @@ img {
 
 header {
   width: 100%;
-  position: -webkit-sticky;
-  position: sticky;
+  position: fixed;
   left: 0;
   top: 0;
   z-index: 9;
   padding: 57.8px 80px 0;
-  grid-area: "header";
+  grid-area: header;
 }
 header .header__container {
   width: 285px;
@@ -37,7 +36,7 @@ header .header__container {
 footer {
   background-color: #3f3f3f;
   padding: 4px;
-  grid-area: "footer";
+  grid-area: footer;
   position: fixed;
   bottom: 0;
   left: 0;
@@ -61,12 +60,11 @@ main {
   grid-template-columns: max-content 1fr;
   align-items: flex-start;
   gap: 48px;
-  margin-top: 80px;
+  margin-top: 174.18px;
 }
 main .sidebar {
-  grid-area: "sidebar";
-  position: -webkit-sticky;
-  position: sticky;
+  grid-area: sidebar;
+  position: fixed;
   top: 174px;
   left: 0;
   padding-left: 80px;
@@ -109,6 +107,7 @@ main .sidebar li:hover:before {
 main .contents {
   grid-area: contents;
   position: relative;
+  margin-left: 29.62%;
 }
 main .contents .content {
   position: absolute;
@@ -281,6 +280,7 @@ main .contents .productions__image:hover {
   }
   main .contents {
     width: 80vw;
+    margin-left: 18%;
   }
   main .contents .activities__contentBlock {
     min-width: unset;
@@ -316,6 +316,7 @@ main .contents .productions__image:hover {
   main .contents {
     width: 90vw;
     margin-top: 240px;
+    margin-left: 0;
   }
   main .contents .content.active {
     margin: 0;
