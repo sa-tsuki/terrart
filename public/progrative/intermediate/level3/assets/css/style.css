@@ -268,7 +268,7 @@ main .contents .productions__image:hover {
   pointer-events: unset;
 }
 
-@media screen and (max-width: 1440px) {
+@media screen and (max-width: 1439px) {
   header {
     padding: 30px 30px 0;
   }
