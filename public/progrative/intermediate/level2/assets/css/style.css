@@ -1,5 +1,5 @@
 body {
-  font-family: 'Montserrat', 'Noto Sans', sans-serif;
+  font-family: "Montserrat", "Noto Sans", sans-serif;
   color: #3f3f3f;
   display: grid;
   grid-template-rows: -webkit-max-content 1fr -webkit-max-content;
@@ -14,11 +14,11 @@ img {
 }
 
 .font-noto {
-  font-family: 'Noto Sans';
+  font-family: "Noto Sans";
 }
 
 .font-roboto {
-  font-family: 'Roboto';
+  font-family: "Roboto";
 }
 
 header {
@@ -50,7 +50,7 @@ main {
   align-items: center;
 }
 main h1 {
-  font-family: 'Roboto';
+  font-family: "Roboto";
   font-style: normal;
   font-weight: 700;
   font-size: 38px;
@@ -63,9 +63,9 @@ main .main__container {
 }
 main .main__lists {
   -moz-column-count: 1;
-  column-count: 1;
+       column-count: 1;
   -moz-column-gap: 60px;
-  column-gap: 60px;
+       column-gap: 60px;
   margin-top: 28px;
 }
 main .main__list .main__listDesc {
@@ -89,7 +89,7 @@ main .main__listHeaderBlock {
   align-items: center;
 }
 main .main__number {
-  font-family: 'Roboto';
+  font-family: "Roboto";
   font-style: normal;
   font-weight: 700;
   font-size: 16px;
@@ -98,7 +98,7 @@ main .main__number {
   margin-right: 9px;
 }
 main .main__text {
-  font-family: 'Roboto';
+  font-family: "Roboto";
   font-style: normal;
   font-weight: 700;
   font-size: 18px;
@@ -106,7 +106,7 @@ main .main__text {
   display: block;
 }
 main .main__listDesc {
-  font-family: 'Roboto';
+  font-family: "Roboto";
   font-style: normal;
   font-weight: 700;
   font-size: 16px;
@@ -116,7 +116,7 @@ main .main__listDesc {
 }
 main .main__catch {
   text-align: center;
-  font-family: 'Roobto';
+  font-family: "Roobto";
   font-style: normal;
   font-weight: 700;
   font-size: 24px;
@@ -149,7 +149,7 @@ footer {
   }
   main .main__lists {
     -moz-column-count: 2;
-    column-count: 2;
+         column-count: 2;
   }
   main .main__list {
     max-width: 560px;
@@ -159,4 +159,4 @@ footer {
   header {
     padding: 55.8px 80px 0;
   }
-} /*# sourceMappingURL=style.css.map */
+}/*# sourceMappingURL=style.css.map */
