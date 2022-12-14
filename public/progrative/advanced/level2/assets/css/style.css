@@ -68,10 +68,18 @@ main .main__lists {
 main .main_flex {
   width: calc(50% - 30px);
 }
-main .main__list {
-  height: 76px;
+main .main__descBlock {
+  height: 0;
   overflow: hidden;
   transition: 0.3s;
+  opacity: 0;
+}
+main .main__list {
+  overflow: hidden;
+  transition: 0.3s;
+}
+main .main__list.on .main__descBlock {
+  opacity: 1;
 }
 main .main__list.on .main__triangle {
   transform: rotate(180deg);

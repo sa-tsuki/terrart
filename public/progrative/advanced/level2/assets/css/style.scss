@@ -75,17 +75,21 @@ main {
       width: calc(50% - 30px);
     }
 
+    &__descBlock {
+      height: 0;
+      overflow: hidden;
+      transition: 0.3s;
+      opacity: 0;
+    }
+
     &__list {
-      height: 76px;
       overflow: hidden;
       transition: 0.3s;
 
-      .main__listDesc {
-      }
-
       &.on {
         .main {
-          &__listDesc {
+          &__descBlock {
+            opacity: 1;
           }
 
           &__triangle {
