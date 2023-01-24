@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0" />
+    <title>Progrative | intermediate | Level 3</title>
+
+    <!-- CSS 読み込み -->
+    <link rel="stylesheet" href="./assets/css/reset.css" />
+    <link rel="stylesheet" href="./assets/css/style.css" />
+
+    <!-- google font 読み込み -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&family=Noto+Sans:wght@100;200;300;400;500;600;700;800;900&family=Roboto:wght@100;300;400;500;700;900&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- JS 読み込み -->
+    <script defer src="./assets/js/select.js"></script>
+    <script defer src="./assets/js/modal.js"></script>
+  </head>
+  <body>
+    <header>
+      <div class="header__container">
+        <img src="./assets/images/header.svg" alt="" />
+      </div>
+    </header>
+
+    <main class="">
+      <section class="sidebar">
+        <ul>
+          <li class="actionSelect active" data-target="activities">Activities</li>
+          <li class="actionSelect" data-target="productions">Productions</li>
+        </ul>
+      </section>
+      <section class="contents">
+        <div id="activities" class="content active">
+          <!--  -->
+          <div class="activities__yearBlock">
+            <div class="activities__year">2022</div>
+            <div class="activities__contents">
+              <!--  -->
+              <div class="activities__contentBlock">
+                <div class="activities__head">
+                  <div class="activities__title">「若者とコロナ」展を開催</div>
+                  <div class="activities__date">08/20</div>
+                </div>
+                <div class="activities__content">
+                  <div class="activities__description">「若年層のコロナの捉え方」を題材にしたストリートスナップ展をSPAce神宮前にて開催いたしました。</div>
+                  <ul class="activities__ul">
+                    <li class="activities__li">
+                      <a class="activities__anker" href="http://" target="_blank" rel="noopener noreferrer">
+                        <span class="activities__icon activities__icon-pin"><img src="./assets/images/icon_pin.svg" alt="" /></span>
+                        <span class="activities__liText">SPAce神宮前</span>
+                      </a>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+              <!--  -->
+              <div class="activities__contentBlock">
+                <div class="activities__head">
+                  <div class="activities__title">「水と私」を数量限定で販売</div>
+                  <div class="activities__date">08/01</div>
+                </div>
+                <div class="activities__content">
+                  <div class="activities__description">フィルム写真集「水と私」を50部限定で販売いたしました。</div>
+                  <ul class="activities__ul">
+                    <li class="activities__li">
+                      <a class="activities__anker" href="http://" target="_blank" rel="noopener noreferrer">
+                        <span class="activities__icon activities__icon-link"><img src="./assets/images/icon_link.svg" alt="" /></span>
+                        <span class="activities__liText">https://terrat.studio</span>
+                      </a>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!--  -->
+          <div class="activities__yearBlock">
+            <div class="activities__year">2021</div>
+            <div class="activities__contents">
+              <!--  -->
+              <div class="activities__contentBlock">
+                <div class="activities__head">
+                  <div class="activities__title">「17:35」を公開</div>
+                  <div class="activities__date">07/24</div>
+                </div>
+                <div class="activities__content">
+                  <div class="activities__description">17時35分を題材に私が見た空をデジタルフォトブックとして公開しました。</div>
+                  <ul class="activities__ul">
+                    <li class="activities__li">
+                      <a class="activities__anker" href="http://" target="_blank" rel="noopener noreferrer">
+                        <span class="activities__icon activities__icon-link"><img src="./assets/images/icon_link.svg" alt="" /></span>
+                        <span class="activities__liText">https://terrat.studio</span>
+                      </a>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+              <!--  -->
+              <div class="activities__contentBlock">
+                <div class="activities__head">
+                  <div class="activities__title">ワークショップを開催しました。</div>
+                  <div class="activities__date">07/20</div>
+                </div>
+                <div class="activities__content">
+                  <div class="activities__description">ワークショップを開催しました。ワークショップの開催風景は以下からご覧ください。</div>
+                  <ul class="activities__ul">
+                    <li class="activities__li">
+                      <a class="activities__anker" href="http://" target="_blank" rel="noopener noreferrer">
+                        <span class="activities__icon activities__icon-link"><img src="./assets/images/icon_link.svg" alt="" /></span>
+                        <span class="activities__liText">https://terrat.studio</span>
+                      </a>
+                    </li>
+                    <li class="activities__li">
+                      <a class="activities__anker" href="http://" target="_blank" rel="noopener noreferrer">
+                        <span class="activities__icon activities__icon-pin"><img src="./assets/images/icon_pin.svg" alt="" /></span>
+                        <span class="activities__liText">SPAce神宮前</span>
+                      </a>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+              <!--  -->
+              <div class="activities__contentBlock">
+                <div class="activities__head">
+                  <div class="activities__title">ワークショップを開催します。</div>
+                  <div class="activities__date">07/01</div>
+                </div>
+                <div class="activities__content">
+                  <div class="activities__description">「私のストリートスナップ」をテーマにワークショップを開催します。詳細は以下からご覧ください。</div>
+                  <ul class="activities__ul">
+                    <li class="activities__li">
+                      <a class="activities__anker" href="http://" target="_blank" rel="noopener noreferrer">
+                        <span class="activities__icon activities__icon-link"><img src="./assets/images/icon_link.svg" alt="" /></span>
+                        <span class="activities__liText">https://terrat.studio</span>
+                      </a>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!--  -->
+          <div class="activities__yearBlock">
+            <div class="activities__year">2020</div>
+            <div class="activities__contents">
+              <!--  -->
+              <div class="activities__contentBlock">
+                <div class="activities__head">
+                  <div class="activities__title">「17:35」を公開</div>
+                  <div class="activities__date">07/24</div>
+                </div>
+                <div class="activities__content">
+                  <div class="activities__description">17時35分を題材に私が見た空をデジタルフォトブックとして公開しました。</div>
+                  <ul class="activities__ul">
+                    <li class="activities__li">
+                      <a class="activities__anker" href="http://" target="_blank" rel="noopener noreferrer">
+                        <span class="activities__icon activities__icon-link"><img src="./assets/images/icon_link.svg" alt="" /></span>
+                        <span class="activities__liText">https://terrat.studio</span>
+                      </a>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+              <!--  -->
+              <div class="activities__contentBlock">
+                <div class="activities__head">
+                  <div class="activities__title">ワークショップを開催しました。</div>
+                  <div class="activities__date">07/20</div>
+                </div>
+                <div class="activities__content">
+                  <div class="activities__description">ワークショップを開催しました。ワークショップの開催風景は以下からご覧ください。</div>
+                  <ul class="activities__ul">
+                    <li class="activities__li">
+                      <a class="activities__anker" href="http://" target="_blank" rel="noopener noreferrer">
+                        <span class="activities__icon activities__icon-link"><img src="./assets/images/icon_link.svg" alt="" /></span>
+                        <span class="activities__liText">https://terrat.studio</span>
+                      </a>
+                    </li>
+                    <li class="activities__li">
+                      <a class="activities__anker" href="http://" target="_blank" rel="noopener noreferrer">
+                        <span class="activities__icon activities__icon-pin"><img src="./assets/images/icon_pin.svg" alt="" /></span>
+                        <span class="activities__liText">SPAce神宮前</span>
+                      </a>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+              <!--  -->
+              <div class="activities__contentBlock">
+                <div class="activities__head">
+                  <div class="activities__title">ワークショップを開催します。</div>
+                  <div class="activities__date">07/01</div>
+                </div>
+                <div class="activities__content">
+                  <div class="activities__description">「私のストリートスナップ」をテーマにワークショップを開催します。詳細は以下からご覧ください。</div>
+                  <ul class="activities__ul">
+                    <li class="activities__li">
+                      <a class="activities__anker" href="http://" target="_blank" rel="noopener noreferrer">
+                        <span class="activities__icon activities__icon-link"><img src="./assets/images/icon_link.svg" alt="" /></span>
+                        <span class="activities__liText">https://terrat.studio</span>
+                      </a>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div id="productions" class="content">
+          <div class="productions__container">
+            <div class="productions__image actionModal">
+              <img src="./assets/images/image01.png" alt="" loading="lazy" />
+            </div>
+            <div class="productions__image actionModal">
+              <img src="./assets/images/image02.png" alt="" loading="lazy" />
+            </div>
+            <div class="productions__image actionModal">
+              <img src="./assets/images/image03.png" alt="" loading="lazy" />
+            </div>
+            <div class="productions__image actionModal">
+              <img src="./assets/images/image04.png" alt="" loading="lazy" />
+            </div>
+            <div class="productions__image actionModal">
+              <img src="./assets/images/image05.png" alt="" loading="lazy" />
+            </div>
+            <div class="productions__image actionModal">
+              <img src="./assets/images/image06.png" alt="" loading="lazy" />
+            </div>
+            <div class="productions__image actionModal">
+              <img src="./assets/images/image07.png" alt="" loading="lazy" />
+            </div>
+            <div class="productions__image actionModal">
+              <img src="./assets/images/image08.png" alt="" loading="lazy" />
+            </div>
+            <div class="productions__image actionModal">
+              <img src="./assets/images/image09.png" alt="" loading="lazy" />
+            </div>
+            <div class="productions__image actionModal">
+              <img src="./assets/images/image010.png" alt="" loading="lazy" />
+            </div>
+            <div class="productions__image actionModal">
+              <img src="./assets/images/image011.png" alt="" loading="lazy" />
+            </div>
+            <div class="productions__image actionModal">
+              <img src="./assets/images/image012.png" alt="" loading="lazy" />
+            </div>
+            <div class="productions__image actionModal">
+              <img src="./assets/images/image013.png" alt="" loading="lazy" />
+            </div>
+            <div class="productions__image actionModal">
+              <img src="./assets/images/image014.png" alt="" loading="lazy" />
+            </div>
+            <div class="productions__image actionModal">
+              <img src="./assets/images/image015.png" alt="" loading="lazy" />
+            </div>
+            <div class="productions__image actionModal">
+              <img src="./assets/images/image016.png" alt="" loading="lazy" />
+            </div>
+            <div class="productions__image actionModal">
+              <img src="./assets/images/image017.png" alt="" loading="lazy" />
+            </div>
+            <div class="productions__image actionModal">
+              <img src="./assets/images/image018.png" alt="" loading="lazy" />
+            </div>
+            <div class="productions__image actionModal">
+              <img src="./assets/images/image019.png" alt="" loading="lazy" />
+            </div>
+            <div class="productions__image actionModal">
+              <img src="./assets/images/image020.png" alt="" loading="lazy" />
+            </div>
+            <div class="productions__image actionModal">
+              <img src="./assets/images/image021.png" alt="" loading="lazy" />
+            </div>
+            <div class="productions__image actionModal">
+              <img src="./assets/images/image022.png" alt="" loading="lazy" />
+            </div>
+            <div class="productions__image actionModal">
+              <img src="./assets/images/image023.png" alt="" loading="lazy" />
+            </div>
+            <div class="productions__image actionModal">
+              <img src="./assets/images/image024.png" alt="" loading="lazy" />
+            </div>
+            <div class="productions__image actionModal">
+              <img src="./assets/images/image025.png" alt="" loading="lazy" />
+            </div>
+            <div class="productions__image actionModal">
+              <img src="./assets/images/image026.png" alt="" loading="lazy" />
+            </div>
+            <div class="productions__image actionModal">
+              <img src="./assets/images/image027.png" alt="" loading="lazy" />
+            </div>
+            <div class="productions__image actionModal">
+              <img src="./assets/images/image028.png" alt="" loading="lazy" />
+            </div>
+            <div class="productions__image actionModal">
+              <img src="./assets/images/image029.png" alt="" loading="lazy" />
+            </div>
+            <div class="productions__image actionModal">
+              <img src="./assets/images/image030.png" alt="" loading="lazy" />
+            </div>
+            <div class="productions__image actionModal">
+              <img src="./assets/images/image031.png" alt="" loading="lazy" />
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <div>© Progrative by&nbsp;<span class="font-roboto"> TERRART 2022</span>.</div>
+    </footer>
+
+    <div id="modal" class="modal actionClose">
+      <img src="./assets/images/image01.png" alt="" loading="lazy" />
+    </div>
+  </body>
+</html>
